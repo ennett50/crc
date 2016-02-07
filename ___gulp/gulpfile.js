@@ -19,7 +19,7 @@ var gulp = require('gulp'),
 
 
 var spritesmith = require("gulp.spritesmith");
-var jsdoc = require("gulp-jsdoc");
+//var jsdoc = require("gulp-jsdoc");
 
 
 
@@ -152,10 +152,10 @@ gulp.task('html:index', function () {
 
 
 });
-gulp.task('js:Doc', function () {
-    gulp.src(path.src.jsProduction)
-        .pipe(jsdoc('../web/___documentation-jsDOC'));
-});
+//gulp.task('js:Doc', function () {
+//    gulp.src(path.src.jsProduction)
+//        .pipe(jsdoc('../web/___documentation-jsDOC'));
+//});
 
 
 gulp.task('js:devProduction', function () {
