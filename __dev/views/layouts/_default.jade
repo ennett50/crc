@@ -1,0 +1,15 @@
+include ../modules/__mixins
+include ../modules/_variables
+block vars
+doctype html
+html(lang="ru").no-js
+	include includes/head.jade
+	body
+		include includes/header
+		div.container
+			block block-content
+
+
+		include includes/footer
+
+		include ../modules/popups.jade
