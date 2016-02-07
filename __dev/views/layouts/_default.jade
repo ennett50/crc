@@ -13,3 +13,7 @@ html(lang="ru").no-js
 		include includes/footer
 
 		include ../modules/popups.jade
+		| <script src="./scripts/_jquery-1.11.3.min.js"></script>
+		| <!--[if lt IE 9]><script src="./scripts/html5shiv.min.js"></script><![endif]-->
+		script(src='./scripts/vendors.js', type='text/javascript')
+		script(src='./scripts/production.js', type='text/javascript')

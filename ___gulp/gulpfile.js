@@ -162,13 +162,13 @@ gulp.task('js:devProduction', function () {
     gulp.src(path.src.jsProduction)
         .on('error', showErr)
         .pipe(rigger())
-        .on('error', showErr)
-        .pipe(sourcemaps.init())
-        .pipe(uglify({
-            preserveComments: 'some'
-        })) //Сожмем наш js
-        .on('error', showErr)
-        .pipe(sourcemaps.write())
+        //.on('error', showErr)
+        //.pipe(sourcemaps.init())
+        //.pipe(uglify({
+        //    preserveComments: 'some'
+        //})) //Сожмем наш js
+        //.on('error', showErr)
+        //.pipe(sourcemaps.write())
         .on('error', showErr)
         .pipe(gulp.dest(path.web.js))
         .pipe(reload({stream: true}));
@@ -221,14 +221,14 @@ gulp.task('css:styleProduction', function () {
     gulp.src(path.src.styleProduction)
         .pipe(concat('00_production.styl'))
         .on('error', showErr)
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(gulp.dest('../__dev/styles/__tmp/'))
         .on('error', showErr)
         .pipe(stylus({
-            compress: true
+            compress: false
         }))
         .on('error', showErr)
-        .pipe(sourcemaps.write())
+        //.pipe(sourcemaps.write())
         .pipe(prefixer({
             browsers: ['last 20 version']
         }))
