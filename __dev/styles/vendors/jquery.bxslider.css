@@ -105,41 +105,41 @@
 
 .bx-wrapper .bx-pager.bx-default-pager a:hover:before,
 .bx-wrapper .bx-pager.bx-default-pager a.active:before {
-	width: 12px;
-    height: 12px;
+	width: 13px;
+    height: 21px;
     left: 0;
+
     top:0;
 }
 
 /* DIRECTION CONTROLS (NEXT / PREV) */
 
 .bx-wrapper .bx-prev {
-	left: 10px;
-	background: url(../images/slider/controls.png) no-repeat 0 -32px;
+	left: 20%;
+	background: url("../images/icon/prev-gallery.png") no-repeat 0;
 }
 
 .bx-wrapper .bx-next {
-	right: 10px;
-	background: url(../images/slider/controls.png) no-repeat -43px -32px;
+	right: 20%;
+    background: url("../images/icon/next-gallery.png") no-repeat 0;
 }
 
-.bx-wrapper .bx-prev:hover {
-	background-position: 0 0;
-}
-
+.bx-wrapper .bx-prev:hover,
 .bx-wrapper .bx-next:hover {
-	background-position: -43px 0;
+	opacity: 0.7;
 }
 
 .bx-wrapper .bx-controls-direction a {
 	position: absolute;
 	top: 50%;
-	margin-top: -16px;
+	margin-top: -10px;
 	outline: 0;
-	width: 32px;
-	height: 32px;
+	width: 13px;
+	height: 21px;
 	text-indent: -9999px;
 	z-index: 10;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
 }
 
 .bx-wrapper .bx-controls-direction a.disabled {

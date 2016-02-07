@@ -1,0 +1,28 @@
+-var mainMenu = []
+-mainMenu[0] = {}
+-mainMenu[0].title = 'Экстра'
+-mainMenu[0].link = '#'
+-mainMenu[1] = {}
+-mainMenu[1].title = 'Доставка'
+-mainMenu[1].link = '#'
+-mainMenu[2] = {}
+-mainMenu[2].title = 'Оплата'
+-mainMenu[2].link = '#'
+-mainMenu[3] = {}
+-mainMenu[3].title = 'Гарантия'
+-mainMenu[3].link = '#'
+-mainMenu[4] = {}
+-mainMenu[4].title = 'Контакты'
+-mainMenu[4].link = '#'
+-mainMenu[5] = {}
+-mainMenu[5].title = 'О нас'
+-mainMenu[5].link = '#'
+nav.main-menu
+	ul.main-menu-ctn
+		-for (var item in mainMenu)
+			li.main-menu-item
+				!='\n'
+				if (currentPageTitle == mainMenu[item].title)
+					span.main-menu-link.__active= mainMenu[item].title
+				else
+					a(href="#{mainMenu[item].link}").main-menu-link= mainMenu[item].title

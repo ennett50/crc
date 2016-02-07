@@ -3,26 +3,17 @@ var ui = {
 
         this.phoneMask();
 
-        this.fancyBox();
-
-        // if btn is button(not submit form)
-        $('[data-target]').click(function (e) {
-            e.preventDefault();
-        });
-
-
-
+        this.initMainGallery();
 
     },
     phoneMask: function () {
         $("input.js-phone-mask").mask("+7(999) 999-99-99");
     },
-    fancyBox: function(){
-        $(".js-fancybox").fancybox({
-            padding: 0,
-            margin: 40,
-            loop: false
-        });
+
+    initMainGallery : function(){
+        $('.js-main-gallery').bxSlider({
+            pagerCustom: '#js-bx-pager'
+        })
     }
 
 };

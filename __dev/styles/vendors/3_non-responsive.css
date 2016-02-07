@@ -34,9 +34,10 @@ body,
 
 /* Reset the container */
 .container {
-    max-width: 1230px!important;
-    min-width: 990px;
-    padding: 0 10px;
+    max-width: 1290px!important;
+    min-width: 940px;
+    width: auto!important;
+    padding: 0 30px;
     box-sizing: padding-box;
     box-sizing: border-box;
 }

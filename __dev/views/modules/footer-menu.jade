@@ -1,0 +1,22 @@
+-var footerMenu = [];
+-footerMenu[0] = {}
+-footerMenu[0].title = 'Продукция'
+-footerMenu[0].items = ['Универсальные', 'Специальные', 'Гаджеты', 'Путешествия', 'Фото и спорт', 'Музыкальные', 'Аксессуары'];
+
+-footerMenu[1] = {}
+-footerMenu[1].title = 'Магазин'
+-footerMenu[1].items = ['Доставка','Оплата','Гарантия','Договор оферты']
+
+-footerMenu[2] = {}
+-footerMenu[2].title = 'Информация'
+-footerMenu[2].items = ['Статьи','Новости']
+
+-for (var i =0; i < footerMenu.length; i++)
+	ul.footer-menu.list-unstyled
+		li.footer-menu-title= footerMenu[i].title
+		-for (var j =0; j< footerMenu[i].items.length; j++)
+			li.footer-menu-item
+				if (currentPageTitle == footerMenu[i].items[j])
+					span.footer-menu-link.__active= footerMenu[i].items[j]
+				else
+					a(href="#").footer-menu-link= footerMenu[i].items[j]

@@ -1,0 +1,21 @@
+.main-menu
+	position relative
+	font-size 15px
+	opens-sans()
+	text-transform uppercase
+	&-item
+		display inline-block
+		vertical-align middle
+		margin-left 10px
+		&:first-child
+			margin-left 0
+	&-link
+		text-decoration none
+		font-weight bold
+		letter-spacing -1px
+		&.__active
+			color #b3b3b3
+		a&
+			trans()
+			&:hover
+				color #b3b3b3

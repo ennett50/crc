@@ -1,2 +1,20 @@
 footer.footer
-    div.container © 2015
+	div.container
+
+		include ../../modules/footer-menu
+
+		div.footer-info
+			p Мы в социальных сетях
+			div.footer-social
+				a(href="#" target="_blank").footer-social-item.__fb
+				a(href="#" target="_blank").footer-social-item.__vk
+				a(href="#" target="_blank").footer-social-item.__inst
+
+			p Не забудьте подписаться на новости <br/><b>не упустите лучшие предложения</b>
+			form.footer-subscribe(method="" action="")
+				input(type="text" placeholder="Ваш email").footer-subscribe-text
+				input(type="submit" value="Вперед").footer-subscribe-btn
+	div.footer-type-payment
+		img(src="images/type-payment.png" alt="")
+	div.footer-bottom
+		div.container © 2016 www.crcspb.ru

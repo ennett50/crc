@@ -141,6 +141,12 @@ sprite($sprite)
 .ruble {
 	font-family: 'ALSRubl', sans-serif;
 }
+    $s-icon-basket = 0px 26px 0px -26px 20px 17px 66px 43px 'sprite.png';
+    $s-icon-fb = 54px 0px -54px 0px 12px 23px 66px 43px 'sprite.png';
+    $s-icon-inst = 0px 0px 0px 0px 22px 21px 66px 43px 'sprite.png';
+    $s-icon-phone = 25px 26px -25px -26px 14px 14px 66px 43px 'sprite.png';
+    $s-icon-vk = 27px 0px -27px 0px 22px 17px 66px 43px 'sprite.png';
+
 opens-sans()
 	font-family: 'Open Sans', sans-serif;
 roboto()
@@ -151,6 +157,8 @@ pt-sans()
 body
 	background transparent
 	pt-sans()
+	border-box()
+	padding-bottom 495px
 
 main
 	position relative
@@ -381,13 +389,227 @@ img
 .breadcrumbs
 	position relative
 	margin-bottom 20px
-
-header
-	position relative
-	background images('pattern-header.png') repeat
+.footer
+	position absolute
+	bottom 0
+	width 100%
+	background #393939
+	padding 80px 0 0 0
 	color #fff
-	open-sans()
-	padding 3px 0 0
+	opens-sans()
+	.container
+		padding 0 5px
+	&-menu
+		display inline-block
+		vertical-align top
+		width 20%
+		&-title
+			margin-bottom 55px
+		&-item
+			margin-bottom 10px
+		&-link
+			text-decoration none
+			color #737373
+			font-size 12px
+			trans()
+			&:hover, &.__active
+				color #fff
+	&-info
+		display inline-block
+		vertical-align top
+		width 365px
+	&-social
+		margin 50px 0
+		position relative
+		&-item
+			display inline-block
+			vertical-align middle
+			margin-right 10px
+			width 50px
+			height 50px
+			background #fff
+			border-radius 50%
+			position relative
+			&:hover
+				&:before
+					opacity 0.7
+			&:before
+				content ''
+				position absolute
+				top 0
+				left 0
+				right 0
+				bottom 0
+				margin auto
+				display block
+				trans()
+
+			&.__vk
+				&:before
+					sprite($s-icon-vk)
+			&.__fb
+				&:before
+					sprite($s-icon-fb)
+			&.__inst
+				&:before
+					sprite($s-icon-inst)
+	&-subscribe
+		position relative
+		padding 15px 0
+		&-text[type="text"]
+			color #fff
+			width 100%
+			padding 10px 15px
+			border 1px solid #818181
+			background #393939
+		&-btn
+			background #818181
+			position absolute
+			right 5px
+			top 20px
+			width 100px
+			height 33px
+			line-height 33px
+			text-align center
+			font-size 12px
+			letter-spacing -1px
+			cursor pointer
+			trans()
+			&:hover
+				background #242424
+	&-type-payment
+		background #fff
+		text-align center
+		padding 5px 0
+	&-bottom
+		border-bottom 3px solid #393939
+		background #242424
+		color #818181
+		font-size 12px
+		padding 12px 0
+.header
+	position relative
+	background images('bg/pattern-header.png') repeat
+	color #fff
+	font-family: 'Open Sans', sans-serif;
+	padding 4px 0 0
+	font-size 15px
+	z-index 1
+	&-top-line
+		background #797573
+		padding 10px 0
+	.left
+		text-align left
+	.right
+		text-align right
+
+	&-link
+		display inline-block
+		vertical-align middle
+		margin-left 20px
+		trans()
+		text-transform uppercase
+		text-decoration none
+		&:hover
+			color #b3b3b3
+	&-basket
+		display inline-block
+		vertical-align middle
+		font-weight bold
+		text-transform uppercase
+		text-decoration none
+		span
+			display inline-block
+			vertical-align middle
+		&-icon
+			background #582000
+			width 50px
+			height 50px
+			margin -10px 10px -10px 30px
+			position relative
+			&:before
+				display block
+				content ''
+				sprite($s-icon-basket)
+				position absolute
+				top 0
+				left 0
+				right 0
+				bottom 0
+				margin auto
+	&-logo
+		top -30px
+		left 50%
+		margin-left -117px
+		content-center(250px,250px)
+		position absolute
+		background images('bg/pattern-header.png') repeat
+		border-radius 50%
+	&-bottom-line
+		position relative
+		padding 10px 0
+	&-slogan
+		letter-spacing: -1px;
+		font-weight bold
+		text-transform uppercase
+		font-size 20px
+		padding-top 20px
+	&-phone
+		font-size 20px
+		margin-bottom 3px
+		font-weight bold
+		&:before
+			content ''
+			display inline-block
+			vertical-align middle
+			margin-right 1px
+			sprite($s-icon-phone)
+.main-gallery
+	position relative
+	&-item
+		float left
+	&-pager
+		position absolute
+		bottom 0
+		left 0
+		width 100%
+		text-align center
+	&-preview
+		display inline-block
+		vertical-align middle
+		margin 0 5px
+		width 110px
+		height 78px
+		overflow hidden
+		position relative
+		img
+			min-width 110px
+			min-height 78px
+	&-ctn
+		position relative
+
+.main-menu
+	position relative
+	font-size 15px
+	opens-sans()
+	text-transform uppercase
+	&-item
+		display inline-block
+		vertical-align middle
+		margin-left 10px
+		&:first-child
+			margin-left 0
+	&-link
+		text-decoration none
+		font-weight bold
+		letter-spacing -1px
+		&.__active
+			color #b3b3b3
+		a&
+			trans()
+			&:hover
+				color #b3b3b3
+
 .pagination
 	position relative
 	margin 0
