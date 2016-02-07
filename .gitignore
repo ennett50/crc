@@ -1,3 +1,7 @@
 .idea
 ___gulp/node_modules/
 web/
+__dev/styles/__tmp/
+__dev/styles/vendors/00_base.css
+__dev/styles/vendors/vendor_base.css
+__dev/styles/global
