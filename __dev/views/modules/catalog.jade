@@ -1,0 +1,95 @@
+-var catalog = [];
+-catalog[0] = {};
+-catalog[0].title = 'Универсальные'
+-catalog[0].count = '189'
+-catalog[0].items = []
+-catalog[0].items[0] = {}
+-catalog[0].items[0].title = 'Малые размеры'
+-catalog[0].items[0].count = '1'
+-catalog[0].items[1] = {}
+-catalog[0].items[1].title = 'Большие размеры'
+-catalog[0].items[1].count = '15'
+-catalog[0].items[2] = {}
+-catalog[0].items[2].title = 'Средние размеры'
+-catalog[0].items[2].count = '105'
+-catalog[0].items[3] = {}
+-catalog[0].items[3].title = 'Транспортные контейнеры'
+-catalog[0].items[3].count = '1'
+
+-catalog[1] = {};
+-catalog[1].title = 'Специальные'
+-catalog[1].count = '18'
+-catalog[1].items = []
+-catalog[1].items[0] = {}
+-catalog[1].items[0].title = 'Рэковые'
+-catalog[1].items[0].count = '4'
+-catalog[1].items[1] = {}
+-catalog[1].items[1].title = 'Медицинские'
+-catalog[1].items[1].count = '9'
+-catalog[1].items[2] = {}
+-catalog[1].items[2].title = 'Инструменты'
+-catalog[1].items[2].count = '15'
+-catalog[1].items[3] = {}
+-catalog[1].items[3].title = 'IT и Офис'
+-catalog[1].items[3].count = '111'
+
+-catalog[2] = {};
+-catalog[2].title = 'Гаджеты'
+-catalog[2].count = '868'
+-catalog[2].items = []
+-catalog[2].items[0] = {}
+-catalog[2].items[0].title = 'Смартфоны'
+-catalog[2].items[0].count = '78'
+-catalog[2].items[1] = {}
+-catalog[2].items[1].title = 'Планшеты'
+-catalog[2].items[1].count = '2'
+-catalog[2].items[2] = {}
+-catalog[2].items[2].title = 'Ноутбуки'
+-catalog[2].items[2].count = ''
+
+-catalog[3] = {};
+-catalog[3].title = 'Путешествия'
+-catalog[3].count = '19'
+-catalog[3].items = []
+-catalog[3].items[0] = {}
+-catalog[3].items[0].title = ''
+-catalog[3].items[0].count = ''
+
+-catalog[4] = {};
+-catalog[4].title = ''
+-catalog[4].count = '189'
+-catalog[4].items = []
+-catalog[4].items[0] = {}
+-catalog[4].items[0].title = ''
+-catalog[4].items[0].count = ''
+
+-catalog[5] = {};
+-catalog[5].title = ''
+-catalog[5].count = '189'
+-catalog[5].items = []
+-catalog[5].items[0] = {}
+-catalog[5].items[0].title = ''
+-catalog[5].items[0].count = ''
+
+-catalog[6] = {};
+-catalog[6].title = ''
+-catalog[6].count = '189'
+-catalog[6].items = []
+-catalog[6].items[0] = {}
+-catalog[6].items[0].title = ''
+-catalog[6].items[0].count = ''
+
+div.main-catalog
+	-for(var i = 0; i < catalog.length; i++)
+		div.main-ctalog-item
+			a(href="#").catalog-preview
+				div.catalog-img
+					img(src="images/example/catalog/#{i+1}.png" alt="")
+				div.catalog-title
+					!= catalog[i].title
+					span.catalog-total-count= catalog[i].count
+			div.catalog-category
+				-for(var j=0;j < catalog[i].items; j++)
+					a(href="#").catalog-category-item
+						!= catalog[i].items[j].title
+						span.catalog-count= catalog[i].items[j].count

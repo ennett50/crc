@@ -5,7 +5,17 @@ block title
 	title=currentPageTitle
 block block-content
 	include modules/main-gallery
-	div.container		
+	div.container
+		form(method="" action="").main-search
+			input(type="text" placeholder="Найдите кейсы для себя").main-search-text
+			input(type="submit" value="").main-search-btn
+
+		.main-seo-text.text
+			h1 Кейсы, рэки, кофры чехля -
+				small безопасная перевозка и хранение
+			p Компания CRCSPB.RU специализируется на торговле товарами таких Компания CRCSPB.RU специализируется на торговле товарами таких Компания CRCSPB.RU специализируется на торговле товарами таких Компания CRCSPB.RU специализируется на торговле товарами таких Компания CRCSPB.RU специализируется на торговле товарами таких предметов.
+
+		include modules/catalog
+
 		include modules/tape-news
 
-	div.container

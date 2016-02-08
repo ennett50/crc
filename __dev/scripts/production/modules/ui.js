@@ -12,7 +12,10 @@ var ui = {
 
     initMainGallery : function(){
         $('.js-main-gallery').bxSlider({
-            pagerCustom: '#js-bx-pager'
+            pagerCustom: '#js-bx-pager',
+            mode : 'fade',
+            speed : 700,
+            auto : true
         })
     }
 
