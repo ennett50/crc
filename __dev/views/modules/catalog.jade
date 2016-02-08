@@ -79,17 +79,17 @@
 -catalog[6].items[0].title = ''
 -catalog[6].items[0].count = ''
 
-div.main-catalog
+div.main-catalog.clearfix
 	-for(var i = 0; i < catalog.length; i++)
-		div.main-ctalog-item
-			a(href="#").catalog-preview
-				div.catalog-img
-					img(src="images/example/catalog/#{i+1}.png" alt="")
-				div.catalog-title
+		div.main-catalog-item
+			a(href="#").main-catalog-preview
+				img(src="images/example/catalog/#{i+1}.png" alt="").main-catalog-img
+				div.main-catalog-title
 					!= catalog[i].title
-					span.catalog-total-count= catalog[i].count
-			div.catalog-category
-				-for(var j=0;j < catalog[i].items; j++)
-					a(href="#").catalog-category-item
+					span.main-catalog-total-count - #{catalog[i].count} -
+			div.main-catalog-category
+				-for(var j=0; j < catalog[i].items.length; j++)
+					a(href="#").main-catalog-category-item
 						!= catalog[i].items[j].title
-						span.catalog-count= catalog[i].items[j].count
+						span.main-catalog-count - #{catalog[i].items[j].count} -
+				!='\n'

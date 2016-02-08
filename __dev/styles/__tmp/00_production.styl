@@ -585,6 +585,74 @@ h6
 			sprite($s-icon-phone)
 	& + container
 		padding-top 20px
+.main-catalog
+	position relative
+	&-item
+		width 33.33%
+		display block
+		float left
+		border 1px solid transparent
+		trans()
+		position relative
+		height 448px
+		overflow hidden
+		margin-bottom 40px
+		&:hover
+			border-color #e2b474
+	&-preview
+		display block
+		margin-bottom: 15px;
+		text-decoration none
+		trans()
+		content-center(100%, 214px)
+		&:hover
+			opacity 0.7
+	&-title
+		padding 5px 70px
+		text-transform uppercase
+		font-weight bold
+		open-sans()
+		font-size 20px
+		background rgba(255,255,255,0.8)
+		z-index 1
+		position absolute
+		width 100%
+		bottom 0
+		left 0
+		text-align left
+	&-total-count
+		position absolute
+		top 5px
+		right 75px
+		text-transform none
+		roboto()
+		font-size 18px
+		font-weight normal
+	&-category
+		position relative
+		&-item
+			display block
+			padding 12px 70px
+			font-size 16px
+			color #582000
+			position relative
+			text-decoration none
+			open-sans()
+			trans()
+			&:hover
+				 background #e1b573
+				.main-catalog-count
+					display block
+	&-count
+		color #7c5145
+		roboto()
+		font-size 18px
+		font-weight normal
+		position absolute
+		top 5px
+		right 75px
+		display none
+
 .main-gallery
 	position relative
 	&-item
