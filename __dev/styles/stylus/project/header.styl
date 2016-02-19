@@ -1,6 +1,7 @@
 .header
 	position relative
-	background images('bg/pattern-header.png') repeat
+	//background images('bg/pattern-header.png') repeat
+	background #211E1B
 	color #fff
 	font-family: 'Open Sans', sans-serif;
 	padding 4px 0 0
@@ -8,7 +9,7 @@
 	z-index 1
 	&-top-line
 		background #797573
-		padding 10px 0
+		padding 9px 0 0
 	.left
 		text-align left
 	.right
@@ -18,6 +19,8 @@
 		display inline-block
 		vertical-align middle
 		margin-left 20px
+		font-size: 14px;
+		margin-top: -5px;
 		trans()
 		text-transform uppercase
 		text-decoration none
@@ -32,12 +35,13 @@
 		span
 			display inline-block
 			vertical-align middle
-		&-icon
-			background #582000
-			width 50px
-			height 50px
-			margin -10px 10px -10px 30px
-			position relative
+			margin: -8px 0 0 0;
+		span&-icon
+			background: #582000;
+			width: 39px;
+			height: 42px;
+			margin: -9px 3px 0 42px;
+			position: relative;
 			&:before
 				display block
 				content ''
@@ -49,31 +53,43 @@
 				bottom 0
 				margin auto
 	&-logo
-		top -30px
-		left 50%
-		margin-left -117px
-		content-center(250px,250px)
-		position absolute
-		background images('bg/pattern-header.png') repeat
-		border-radius 50%
+		top: -19px;
+		left: 50%;
+		margin-left: -140px;
+		content-center(270px, 250px)
+		position: absolute;
+		z-index: 2;
+		//background: url("../images/bg/pattern-header.png") repeat;
+		background: #211E1B;
+		border-radius: 48%;
 	&-bottom-line
 		position relative
-		padding 10px 0
+		font-size: 17px;
+		padding 10px 0 14px
+		p
+			margin 0
+			& + p
+				margin-top 5px
 	&-slogan
 		letter-spacing: -1px;
 		font-weight bold
 		text-transform uppercase
 		font-size 20px
 		padding-top 20px
+		line-height: 27px;
+		max-width: 35%;
 	&-phone
 		font-size 20px
-		margin-bottom 3px
+		margin-bottom 6px
+		margin-top: 8px;
 		font-weight bold
 		&:before
 			content ''
+			margin-right: 5px;
 			display inline-block
 			vertical-align middle
 			margin-right 1px
 			sprite($s-icon-phone)
-	& + container
-		padding-top 20px
+
+	& + .container
+		padding-top 80px

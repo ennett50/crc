@@ -9,43 +9,87 @@ body
 	background transparent
 	pt-sans()
 	border-box()
-	padding-bottom 495px
+	padding-bottom 512px
 
 main
 	position relative
+	overflow hidden
 
 .wrapper-content
 	clear()
 
 .button
-	text-decoration: none;
-	text-align: center;
-	display: inline-block;
-	outline 0;
-	border: 0
-	cursor pointer
-	vertical-align middle
-	border-box()
-	font-size 15px
-	text-shadow 0 2px 0 #e3771e
-	padding: 0 14px;
-	line-height 44px
-	height 44px
-	background: #e68422;
-	color: #fff;
-	border-radius 2px
-	border-bottom 2px solid #dd7010
-	position relative
-	trans()
+	&-more
+		text-decoration: none;
+		text-align: center;
+		display: block;
+		margin 0 auto
+		outline 0;
+		border: 0
+		cursor pointer
+		vertical-align middle
+		border-box()
+		font-size 20px
+		roboto()
+		font-weight bold
+		line-height 54px
+		width 262px
+		height 54px
+		background: #fff;
+		color: #393939;
+		text-transform uppercase
+		position relative
+		trans()
+		&:hover
+			opacity 0.7
 
-	&:hover, &.__hover
-		background #f26c0c
-		border-color #f26c0c
-		color #fff
-	&:focus, &.__focus, &:active
-		background #e64d00
-		border-color #e64d00
-		color #fff
+	&-detail
+		text-decoration: none;
+		text-align: center;
+		display: inline-block;
+		outline 0;
+		border: 0
+		cursor pointer
+		vertical-align middle
+		border-box()
+		font-size 20px
+		open-sans()
+		font-weight bold
+		line-height 54px
+		width 200px
+		height 54px
+		background: #e51f1f;
+		color: #fff;
+		position relative
+		trans()
+		&:hover
+			opacity 0.7
+	&-info
+		text-decoration: none;
+		text-align: center;
+		display: inline-block;
+		outline 0;
+		border: 0
+		cursor pointer
+		vertical-align middle
+		border-box()
+		font-size 14px
+		open-sans()
+		font-weight bold
+		line-height 40px
+		width 140px
+		height 40px
+		background: #fcf7f1;
+		color: #582000;
+		text-transform uppercase
+		position relative
+		trans()
+		&:hover
+			opacity 0.7
+
+
+
+
 
 .falseLink
 	display inline

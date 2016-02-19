@@ -37,7 +37,7 @@ body,
     max-width: 1290px!important;
     min-width: 940px;
     width: auto!important;
-    padding: 0 30px;
+    padding: 0 10px;
     box-sizing: padding-box;
     box-sizing: border-box;
 }

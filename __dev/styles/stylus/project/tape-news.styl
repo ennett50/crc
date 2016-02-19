@@ -1,12 +1,38 @@
 .tape-news
+	text-align center
 	position relative
-	margin-bottom 50px
+	margin-bottom 80px
+	&.__articles
+		margin-bottom: 98px;
+		.tape-news-all, .tape-news-item
+			background #ffedab
+	h2
+		display inline-block
+		position relative
+		margin-bottom 45px
+	&-all
+		position absolute
+		font-weight normal
+		top: 0;
+		right: -180px;
+		background: #f0f0f0;
+		text-decoration: none;
+		padding: 8px 10px;
+		font-size 12px
+		open-sans()
+		display block
+		text-transform none
+		trans()
+		&:hover
+			opacity 0.7
 	&-container
 		position relative
 	&-item
+		text-align left
 		float left
 		position relative
 		width 490px
+		background #f0f0f0
 	&-preview
 		float left
 		position relative
@@ -15,14 +41,49 @@
 		position absolute
 		top 10px
 		left 10px
-		background yellow
-		color #000
-		padding 5px 10px
+		z-index 2
+		background #ffedab
+		color #393939
+		open-sans()
+		font-size 12px
+		padding 7px 10px
 	&-content
 		margin-left 270px
+		position relative
+		padding 55px 10px 55px 0
+		color #393939
+		font-weight 300
+		font-size 14px
+		open-sans()
+		line-height 24px
 	&-title
 		font-weight bold
-		display inline-block
+		font-size 18px
+		text-decoration none
 		margin-bottom 15px
-	p
-		font-size 12px
+		line-height 24px
+		open-sans()
+		&:hover
+			text-decoration underline
+	&-link
+		content-center(250px, 310px)
+		display block
+	&-info
+		margin-bottom 15px
+		line-height: normal;
+	.bx-wrapper .bx-prev
+		background: url(../images/icon/prev-slider.png) 0 no-repeat;
+		left: -70px;
+		@media screen and (max-width: 1366px)
+			display none
+	.bx-wrapper .bx-next
+		background: url(../images/icon/next-slider.png) 0 no-repeat;
+		right: -70px;
+		@media screen and (max-width: 1366px)
+			display none
+	.bx-wrapper .bx-pager
+		display none
+		bottom: -40px;
+
+		@media screen and (max-width: 1366px)
+			display block

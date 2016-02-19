@@ -130,16 +130,67 @@
 
 
 div.main-catalog.clearfix
-	-for(var i = 0; i < catalog.length; i++)
-		div.main-catalog-item
-			a(href="#").main-catalog-preview
-				img(src="images/example/catalog/#{i+1}.png" alt="").main-catalog-img
-				div.main-catalog-title
-					!= catalog[i].title
-					span.main-catalog-total-count - #{catalog[i].count} -
-			div.main-catalog-category
-				-for(var j=0; j < catalog[i].items.length; j++)
-					a(href="#").main-catalog-category-item
-						!= catalog[i].items[j].title
-						span.main-catalog-count - #{catalog[i].items[j].count} -
-				!='\n'
+	div.main-catalog-line
+		-for(var i = 0; i < 3; i++)
+			div.main-catalog-item
+				a(href="#").main-catalog-preview
+					img(src="images/example/catalog/#{i+1}.png" alt="").main-catalog-img
+					div.main-catalog-title
+						!= catalog[i].title
+						span.main-catalog-total-count - #{catalog[i].count} -
+				div.main-catalog-category
+					-for(var j=0; j < catalog[i].items.length; j++)
+						a(href="#").main-catalog-category-item
+							!= catalog[i].items[j].title
+							span.main-catalog-count - #{catalog[i].items[j].count} -
+					!='\n'
+	div.main-catalog-line
+		-for(var i = 3; i < 6; i++)
+			div.main-catalog-item
+				a(href="#").main-catalog-preview
+					img(src="images/example/catalog/#{i+1}.png" alt="").main-catalog-img
+					div.main-catalog-title
+						!= catalog[i].title
+						span.main-catalog-total-count - #{catalog[i].count} -
+				div.main-catalog-category
+					-for(var j=0; j < catalog[i].items.length; j++)
+						a(href="#").main-catalog-category-item
+							!= catalog[i].items[j].title
+							span.main-catalog-count - #{catalog[i].items[j].count} -
+						!='\n'
+	div.main-catalog-line
+		-for(var i = 6; i < 7; i++)
+			div.main-catalog-item
+				a(href="#").main-catalog-preview
+					img(src="images/example/catalog/#{i+1}.png" alt="").main-catalog-img
+					div.main-catalog-title
+						!= catalog[i].title
+						span.main-catalog-total-count - #{catalog[i].count} -
+				div.main-catalog-category
+					-for(var j=0; j < catalog[i].items.length; j++)
+						a(href="#").main-catalog-category-item
+							!= catalog[i].items[j].title
+							span.main-catalog-count - #{catalog[i].items[j].count} -
+						!='\n'
+		div.banner-main
+			div.banner-main-ctn
+				div.banner-main-bg
+				div.banner-main-info
+					div.left.banner-main-actions
+						div.banner-main-text
+							| Акция
+							!="\n"
+							a(href="#").banner-main-all-actions открыть все акции
+						div.banner-main-date до 12 декабря 2015
+					div.right.banner-main-title
+						a(href="#").banner-main-link iM2050GP2 <b>GoPro Case</b>
+					div.clearfix
+					a(href="#").left.banner-main-img
+						img(src="images/example/banner-main.png" alt="")
+					div.right.banner-main-data
+						p Защитный кейс <br/>от компании <br/>PELICAN <br/>на 2 камеры <br/>GoPro
+						div.banner-main-old-price 21 000 Р
+						div.banner-main-new-price 15 000 Р
+						a(href="#").button-detail Подробно
+
+

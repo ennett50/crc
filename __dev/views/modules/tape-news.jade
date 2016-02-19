@@ -1,5 +1,7 @@
 .tape-news
-	ul.tape-news-container.clearfix.list-unstyled
+	h2 Новости
+		a(href="#").tape-news-all читайте все новости
+	ul.tape-news-container.clearfix.list-unstyled.js-list-news
 		-var tapeNews = []
 		-tapeNews[0] = {}
 		-tapeNews[0].title = 'Новый кейс  для оружия  Pelican 472-M4- M11-5 Rifle Case'
@@ -11,13 +13,33 @@
 		-tapeNews[1].link = '#'
 		-tapeNews[1].img = 'images/example/Layer-2.png'
 		-tapeNews[1].content = 'помогут не только в работе'
+		-for (var i = 0; i< 2; i++)
+			-for (var item in tapeNews)
+				li.tape-news-item
+					.tape-news-preview
+						.tape-news-date 19 января `15
 
-		-for (var item in tapeNews)
-			li.tape-news-item
-				.tape-news-preview
-					.tape-news-date 19.02.15
-					a(href="#{tapeNews[item].link}").tape-news-link
-						img.tape-news-img(alt='' src="#{tapeNews[item].img}")
-				.tape-news-content
-					a(href="#").tape-news-title= tapeNews[item].title
-					p= tapeNews[item].content
+						a(href="#{tapeNews[item].link}").tape-news-link
+							img.tape-news-img(alt='' src="#{tapeNews[item].img}")
+					.tape-news-content
+						div.tape-news-info
+							a(href="#").tape-news-title= tapeNews[item].title
+						p= tapeNews[item].content
+
+
+.tape-news.__articles
+	h2 Статьи
+		a(href="#").tape-news-all читайте все статьи
+	ul.tape-news-container.clearfix.list-unstyled.js-list-news
+		-for (var i = 0; i< 2; i++)
+			-for (var item in tapeNews)
+				li.tape-news-item
+					.tape-news-preview
+						.tape-news-date 19 января `15
+
+						a(href="#{tapeNews[item].link}").tape-news-link
+							img.tape-news-img(alt='' src="#{tapeNews[item].img}")
+					.tape-news-content
+						div.tape-news-info
+							a(href="#").tape-news-title= tapeNews[item].title
+						p= tapeNews[item].content

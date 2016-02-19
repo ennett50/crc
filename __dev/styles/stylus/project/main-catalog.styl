@@ -1,16 +1,23 @@
 .main-catalog
 	position relative
+	margin-bottom: 61px;
+	&-line
+		margin-bottom 40px
+		display table
+		width 100%
 	&-item
 		width 33.33%
-		display inline-block
-		vertical-align middle
-		margin-right -4px
+		border-box()
+		padding 15px
+		display table-cell
+		vertical-align top
 		border 1px solid transparent
 		trans()
 		position relative
+		padding-top 10px
 		min-height 448px
 		overflow hidden
-		margin-bottom 40px
+
 		&:hover
 			border-color #e2b474
 	&-preview
@@ -18,7 +25,7 @@
 		margin-bottom: 15px;
 		text-decoration none
 		trans()
-		content-center(100%, 214px)
+		content-center(100%, 208px)
 		&:hover
 			opacity 0.7
 	&-title
@@ -34,25 +41,35 @@
 		bottom 0
 		left 0
 		text-align left
+		@media screen and (max-width: 1200px)
+			padding-left 10px
+			padding-right 55px
+
 	&-total-count
 		position absolute
 		top 5px
-		right 75px
+		right 45px
 		text-transform none
 		roboto()
 		font-size 18px
 		font-weight normal
+		@media screen and (max-width: 1200px)
+			right: 10px
 	&-category
 		position relative
+		margin-bottom 25px
 		&-item
 			display block
-			padding 12px 70px
+			padding 10px 100px 10px 70px
 			font-size 16px
 			color #582000
 			position relative
 			text-decoration none
 			open-sans()
 			trans()
+			@media screen and (max-width: 1200px)
+				padding-left 10px
+				padding-right 55px
 			&:hover
 				 background #e1b573
 				.main-catalog-count
@@ -63,6 +80,9 @@
 		font-size 18px
 		font-weight normal
 		position absolute
-		top 10px
-		right 75px
+		top 50%
+		margin-top -12px
+		right 45px
 		display none
+		@media screen and (max-width: 1200px)
+			right: 10px

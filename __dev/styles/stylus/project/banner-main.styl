@@ -1,0 +1,106 @@
+.banner-main
+	display table-cell
+	vertical-align top
+	width 66.66%
+	text-align right
+	&-ctn
+		height 420px
+		position relative
+		max-width 820px
+	&-bg
+		background images('bg/banner-main.png') no-repeat
+		position absolute
+		top: -43px;
+		left: 0;
+		width 908px
+		height 564px
+		z-index 1
+	&-info
+		position relative
+		border 5px solid #e51f1f
+		padding 22px 40px
+		height 420px
+		z-index 3
+		background #fff
+		margin-top: 24px;
+		left 7px
+		overflow hidden
+	&-actions
+		width 38%
+	&-text
+		text-align left
+		text-transform uppercase
+		color #e51f1f
+		font-size 32px
+		font-weight bold
+		margin-bottom -6px
+		open-sans()
+	&-all-actions
+		color #fff
+		background #e51f1f
+		padding 4px 5px 4px
+		font-weight normal
+		white-space nowrap
+		text-decoration none
+		font-size 12px
+		position relative
+		line-height: normal;
+		margin: -5px 0 0 -7px;
+		display: inline-block;
+		vertical-align: middle;
+		@media screen and (max-width: 1190px)
+			display none
+		&:after
+			display block
+			content ''
+			position absolute
+			right -6px
+			top 0
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 12px 0 12px 6px;
+			border-color: transparent transparent transparent #e51f1f;
+	&-date
+		font-weight 300
+		open-sans()
+		font-size 18px
+		margin-bottom 10px
+		text-align left
+
+	&-title
+		width 62%
+		text-align right
+		font-weight 300
+		open-sans()
+		font-size 36px
+	&-link
+		text-decoration none
+		_text-overflow(100%)
+		display: inline-block;
+		&:hover
+			text-decoration underline
+	&-img
+		position relative
+		content-center(65%,300px)
+	&-data
+		font-size 18px
+		open-sans()
+		font-weight 300
+		width 35%
+		text-align right
+		margin-top: -13px
+	&-old-price
+		font-weight 300
+		margin-bottom 5px
+		margin-top: 37px;
+		font-size 30px
+		line-height 24px
+		text-decoration line-through
+		white-space nowrap
+	&-new-price
+		font-weight bold
+		white-space nowrap
+		font-size 50px
+		margin-bottom 10px
+		line-height 48px
