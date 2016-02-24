@@ -5,6 +5,14 @@ input[type="number"], input[type="search"],
 input[type="time"], input[type="tel"],
 input[type="month"], input[type="week"]
 	background #fff
+	pt-sans()
+	font-size 12px
+	border 1px solid #818181
+	width 100%
+	border-box()
+	text-align center
+	padding 12px
+	display block
 
 .form
 	position relative
@@ -29,12 +37,12 @@ input[type="month"], input[type="week"]
 		width 100%!important
 
 	&-item
-		margin-bottom 30px
-		&.error
+		margin-bottom 20px
+		&.__error
 			input,
 			select,
 			textarea
-				border 1px solid #faa
+				border 1px solid #A40B16
 		& .form-attention
 			margin 0
 	&-attention
@@ -43,7 +51,7 @@ input[type="month"], input[type="week"]
 		font-weight 300
 		margin-bottom 20px
 	textarea
-		height 160px
+		height 90px
 	label
 		display block
 		font-size 16px
@@ -73,18 +81,13 @@ input[type="month"], input[type="week"]
 			line-height normal
 			padding-top: 10px;
 
-	.button
-		line-height 53px
-		height 53px
-		font-size 18px
-		font-weight 300
-		padding-top 0
-		padding-bottom 0
-		width 100%
-		text-transform uppercase
+
 
 
 .error-msg
 	color #9e0b0f
+	font-size 12px
 	margin-bottom 10px
+	input + &
+		margin-top 7px
 

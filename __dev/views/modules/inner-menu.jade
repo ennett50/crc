@@ -1,0 +1,32 @@
+-var innerMenu = []
+-innerMenu[0] = {}
+-innerMenu[0].title = 'Универсальные'
+-innerMenu[0].link = '#'
+-innerMenu[1] = {}
+-innerMenu[1].title = 'Специальные'
+-innerMenu[1].link = '#'
+-innerMenu[2] = {}
+-innerMenu[2].title = 'Гаджеты и девайсы'
+-innerMenu[2].link = '#'
+-innerMenu[3] = {}
+-innerMenu[3].title = 'Для путешествий'
+-innerMenu[3].link = '#'
+-innerMenu[4] = {}
+-innerMenu[4].title = 'Фото и спорт'
+-innerMenu[4].link = '#'
+-innerMenu[5] = {}
+-innerMenu[5].title = 'Музыкальные инструменты'
+-innerMenu[5].link = '#'
+-innerMenu[6] = {}
+-innerMenu[6].title = 'Аксессуары'
+-innerMenu[6].link = '#'
+
+nav.inner-menu.clearfix
+	ul.inner-menu-ctn.list-unstyled
+		-for (var item in innerMenu)
+			li.inner-menu-item
+				!='\n'
+				if (currentPageTitle == innerMenu[item].title)
+					span.inner-menu-link.__active= innerMenu[item].title
+				else
+					a(href="#{innerMenu[item].link}").inner-menu-link= innerMenu[item].title

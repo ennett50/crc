@@ -1,0 +1,32 @@
+extends layouts/_default
+block vars
+	-var currentPageTitle = "Контакты"
+block title
+	title=currentPageTitle
+block block-content
+	+breadcrumbsSimple(["Контакты"], '|')
+	h1= currentPageTitle
+	div.contacts
+		div.row
+			div.col-lg-4.col-md-4
+				div.contacts-city Санкт-Петербург
+				div.contacts-phone 8 (812) 640-93-20
+			div.col-lg-4.col-md-4
+				div.contacts-city Москва
+				div.contacts-phone 8 (495) 640-93-20
+			div.col-lg-4.col-md-4
+				div.contacts-city Вся Россия
+				div.contacts-phone 8 (800) 555-50-46
+
+		div.contacts-block
+			div.contacts-block-title info@crcspb.ru
+			form.contacts-block-form.form(method="" action="")
+				div.form-item.__error
+					input(type="text" placeholder="Ваше имя")
+					div.error-msg Заполните это поле
+				div.form-item
+					input(type="text" placeholder="Email")
+				div.form-item
+					textarea(placeholder="Сообщение")
+
+				input(type="submit" value="Отправить").button.form-button

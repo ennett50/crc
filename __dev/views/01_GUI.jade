@@ -8,39 +8,13 @@ block block-content
 		p
 			b Шрифт:
 		p
-			span  Museo Sans Cyrl  500 <strong>700</strong> <span class="extra-bold">900</span>
+			span.open-sans Open Sans (bold, light, italic)
 		p
-			b Цвета:
-
-
-
-		div.row
-			div.col-md-1.p-25.mr-10(style="background:#f2d649")
-				span #f2d649
-
-			div.col-md-1.p-25.mr-10(style="background:#e68422")
-				span #e68422
-
-			div.col-md-1.p-25.mr-10(style="background:#a62c21")
-				span #a62c21
-
-			div.col-md-1.p-25.mr-10(style="background:#808080")
-				span #808080
-
-			div.col-md-1.p-25.mr-10(style="background:#d93a2b")
-				span #d93a2b
-
-			div.col-md-1.p-25.mr-10(style="background:#cccccc")
-				span #cccccc
-
-			div.col-md-1.p-25.mr-10(style="background:#f2f2f2")
-				span #f2f2f2
-
-			div.col-md-1.p-25.mr-10(style="background:#efefef")
-				span #efefef
-
-
-
+			span.pt-sans PT Sans (bold, light, italic)
+		p
+			span.roboto Roboto (bold, light, italic)
+		p
+			span.roboto_condensed Roboto Condensed (normal)
 
 
 		h1 h1 Заголовок H1
@@ -53,55 +27,65 @@ block block-content
 			a(href="#") Ссылка в тексте
 			|  eum. Rerum, repellendus sed itaque quos beatae aspernatur esse delectus numquam ea quae iste ipsum modi voluptatibus aperiam dolorum architecto nostrum suscipit maiores ipsa dolores vel. Vitae laborum, eveniet molestiae aperiam laboriosam nobis maiores placeat?
 		p {Абзац} Mollitia ab impedit necessitatibus animi fugiat quae tenetur sunt qui, neque consectetur sit, quisquam iure accusantium placeat iusto labore rerum ad, doloremque excepturi. Quo rerum maiores ipsa, aliquid expedita, id dolorem magnam sed architecto temporibus iure quisquam voluptatem itaque, sunt.
-		div.row
-			div.col-lg-6.col-md-6
-				ol
-					li
-						|  Lorem ipsum dolor sit.
-					li
-						|  Eveniet tempora odit facilis.
+
+		h2 Другого цвета .text
+		div.text
+
+			p {Абзац} Reprehenderit minima nihil quasi sunt&nbsp;
+				a(href="#") Ссылка в тексте
+				|  eum. Rerum, repellendus sed itaque quos beatae aspernatur esse delectus numquam ea quae iste ipsum modi voluptatibus aperiam dolorum architecto nostrum suscipit maiores ipsa dolores vel. Vitae laborum, eveniet molestiae aperiam laboriosam nobis maiores placeat?
+			p {Абзац} Mollitia ab impedit necessitatibus animi fugiat quae tenetur sunt qui, neque consectetur sit, quisquam iure accusantium placeat iusto labore rerum ad, doloremque excepturi. Quo rerum maiores ipsa, aliquid expedita, id dolorem magnam sed architecto temporibus iure quisquam voluptatem itaque, sunt.
+
+
+			div.row
+				div.col-lg-6.col-md-6
 					ol
 						li
-							|  Repellendus deleniti, quod aperiam.
+							|  Lorem ipsum dolor sit.
 						li
-							|  Atque natus, voluptatem odio.
+							|  Eveniet tempora odit facilis.
 						ol
 							li
 								|  Repellendus deleniti, quod aperiam.
+							li
+								|  Atque natus, voluptatem odio.
+							ol
+								li
+									|  Repellendus deleniti, quod aperiam.
+							li
+								|  Placeat inventore adipisci sed.
 						li
-							|  Placeat inventore adipisci sed.
-					li
-						|  Ex, sapiente libero minima!
-					li
-						|  Repellat officiis iste dignissimos.
-					li
-						|  Maiores dolorum quaerat, totam.
-					li
-						|  Praesentium, voluptas quasi quae.
-					li
-						|  Repellat, veritatis aut voluptatibus.
-				br
-				div.falseLink Псевдоссылка
-				br
-				br
-				a(href="#") Ссылка
-			div.col-lg-6.col-md-6
-				ul
-					li
-						|  Lorem ipsum dolor sit amet.
-					li
-						|  Porro non nemo ipsum quam?
+							|  Ex, sapiente libero minima!
+						li
+							|  Repellat officiis iste dignissimos.
+						li
+							|  Maiores dolorum quaerat, totam.
+						li
+							|  Praesentium, voluptas quasi quae.
+						li
+							|  Repellat, veritatis aut voluptatibus.
+					br
+					div.falseLink Псевдоссылка
+					br
+					br
+					a(href="#") Ссылка
+				div.col-lg-6.col-md-6
 					ul
 						li
 							|  Lorem ipsum dolor sit amet.
 						li
 							|  Porro non nemo ipsum quam?
-					li
-						|  Eveniet similique veritatis voluptatibus quidem.
-					li
-						|  Expedita blanditiis adipisci eos illum.
-					li
-						|  Veniam aliquam nemo obcaecati quisquam!
+						ul
+							li
+								|  Lorem ipsum dolor sit amet.
+							li
+								|  Porro non nemo ipsum quam?
+						li
+							|  Eveniet similique veritatis voluptatibus quidem.
+						li
+							|  Expedita blanditiis adipisci eos illum.
+						li
+							|  Veniam aliquam nemo obcaecati quisquam!
 		br
 		hr
 		br
@@ -121,7 +105,7 @@ block block-content
 		p
 			b Курсив:
 		p
-			em This line of text is meant to be treated as fine print
+			i This line of text is meant to be treated as fine print
 		h3 Классы выравнивания и трансформации:
 		| <p class="text-left">{.text-left} Left aligned text.</p>
 		| <p class="text-center">{.text-center} Center aligned text.</p>
@@ -292,28 +276,18 @@ block block-content
 		br
 		br
 		br
-		form.form-horizontal
-			.form-group
-				label.col-sm-2.control-label(for='inputEmail3') Email
-				.col-sm-10
-					input#inputEmail3.form-control(type='email', placeholder='Email')
-			.form-group
-				label.col-sm-2.control-label(for='inputPassword3') Password
-				.col-sm-10
-					input#inputPassword3.form-control(type='password', placeholder='Password')
-			.form-group
-				.col-sm-offset-2.col-sm-10
-					.checkbox
-						label
-							input(type='checkbox', value='')
-							|     Option one is this and that—be sure to include why it's great
-					.checkbox.disabled
-						label
-							input(type='checkbox', value='', disabled='')
-							|     Option two is disabled
-
-			.form-group
-				.col-sm-offset-2.col-sm-10
+		div.callback
+			div.callback-title Если Вы не нашли ТОВАР, который искали,<b>закажите его здесь и сейчас</b>!
+			form.callback-form.form(method="" action="")
+				div.form-item.__error
+					input(type="text" placeholder="Ваше имя")
+					div.error-msg Заполните это поле
+				div.form-item
+					select
+						option Значение 1
+						option Значение 2
+						option Значение 3
+				div.form-item
 					.radio
 						label
 							input#optionsRadios1(type='radio', name='optionsRadios', value='option1', checked='')
@@ -326,13 +300,19 @@ block block-content
 						label
 							input#optionsRadios3(type='radio', name='optionsRadios', value='option3', disabled='')
 							|     Option three is disabled
+				div.form-item
+					textarea(placeholder="Описание товара")
+				div.form-item
+					.checkbox
+						label
+							input(type='checkbox', value='')
+							|     Option one is this and that—be sure to include why it's great
+					.checkbox.disabled
+						label
+							input(type='checkbox', value='', disabled='')
+							|     Option two is disabled
+				input(type="submit" value="Отправить").button.form-button
 
-			.form-group
-				.col-sm-offset-2.col-sm-10
-					button.button(type='submit') Sign in
-		br
-		br
-		hr
 
 
 

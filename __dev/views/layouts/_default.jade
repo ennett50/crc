@@ -7,7 +7,25 @@ html(lang="ru").no-js
 	body
 		include includes/header
 		main
-			block block-content
+			if currentPageTitle == 'Главная страница'
+				block block-content
+			else if currentPageTitle == '404 страница'
+				include ../modules/main-gallery
+				include ../modules/main-search
+				block block-content
+			else
+				div.container.__inner
+					include ../modules/inner-menu
+					aside.left-aside
+						div.banner
+							a(href="#").banner-main-all-actions открыть все акции
+							a(href="#").banner-link
+								img(src="images/example/banner-left.png" alt="")
+					div.after-left-aside
+						div.content(class="#{currentPageTitle == 'Экстра' ? '__fixed': ''}")
+							block block-content
+					div.clearfix
+
 
 
 		include includes/footer

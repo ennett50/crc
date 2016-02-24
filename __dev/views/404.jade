@@ -1,0 +1,12 @@
+extends layouts/_default
+block vars
+	-var currentPageTitle = "404 страница"
+block title
+	title=currentPageTitle
+block block-content
+	div.page-404.container
+		div.page-404-title 404
+		div.page-404-desc такой страницы нет на нашем сайте
+		div.page-404-icon
+			img(src="images/icon-404.png" alt="")
+
