@@ -12,9 +12,9 @@
 	img
 		max-width 100%
 		&.left
-			margin-right 10px
+			margin-right 40px
 		&.right
-			margin-left 10px
+			margin-left 40px
 		
 	p,
 	img,
@@ -23,6 +23,28 @@
 		margin-bottom 30px
 		line-height 30px
 
+.text
+	blockquote
+		p
+			line-height 24px
+blockquote
+	position relative
+	color #393939
+	font-style italic
+	font-size 14px
+	line-height normal
+	padding: 0 0 0 55px;
+	border 0
+	background url('../images/icon/icon-quote.png') 0 0 no-repeat
+	p
+		line-height 24px
+	&:before
+		display block
+		content ''
+		sprite($s-icon-quote)
+		position absolute
+		top 0
+		left 0
 
 .bold 
 	font-weight bold

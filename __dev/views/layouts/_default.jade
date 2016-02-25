@@ -15,14 +15,26 @@ html(lang="ru").no-js
 				block block-content
 			else
 				div.container.__inner
+					include ../modules/main-search
 					include ../modules/inner-menu
 					aside.left-aside
 						div.banner
 							a(href="#").banner-main-all-actions открыть все акции
 							a(href="#").banner-link
 								img(src="images/example/banner-left.png" alt="")
+						if (article)
+							nav.left-menu
+								ul.left-menu-ctn.list-unstyled
+									li.left-menu-item
+										a(href="#").left-menu-link Малые размеры
+									li.left-menu-item
+										span.left-menu-link.__active Средние размеры
+									li.left-menu-item
+										a(href="#").left-menu-link Большие размеры
+									li.left-menu-item
+										a(href="#").left-menu-link Транспортные контейнеры
 					div.after-left-aside
-						div.content(class="#{currentPageTitle == 'Экстра' ? '__fixed': ''}")
+						div.content(class="#{text = 'true' ? '__fixed': ''}")
 							block block-content
 					div.clearfix
 
