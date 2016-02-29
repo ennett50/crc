@@ -33,9 +33,15 @@ html(lang="ru").no-js
 										a(href="#").left-menu-link Большие размеры
 									li.left-menu-item
 										a(href="#").left-menu-link Транспортные контейнеры
+						if (catalog)
+							include ../modules/filter-catalog
 					div.after-left-aside
-						div.content(class="#{text = 'true' ? '__fixed': ''}")
-							block block-content
+						if (text)
+							div.content.__fixed
+								block block-content
+						else
+							div.content
+								block block-content
 					div.clearfix
 
 

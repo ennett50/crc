@@ -1,0 +1,62 @@
+.selection
+	position relative
+	border-top 1px solid #e7e8e8
+	border-bottom 1px solid #e7e8e8
+	padding: 21px 0;
+	font-size 18px
+	margin-bottom 30px
+	open-sans()
+	&-title
+		display inline-block
+		vertical-align middle
+		margin-right 20px
+		color #393939
+		line-height: 18px;
+		margin-bottom 12px
+		font-weight bold
+	&-reset
+		display inline-block
+		vertical-align middle
+		border-bottom 1px dotted #393939
+		color #393939
+		margin-bottom 12px
+		line-height: 18px;
+		cursor pointer
+		trans()
+		&:hover
+			opacity 0.7
+	&-list
+		position relative
+	&-item
+		color #818181
+		font-size 14px
+		background #f0f0f0
+		display inline-block
+		vertical-align middle
+		white-space nowrap
+		margin 0 45px 10px 0
+		height 45px
+		line-height 45px
+		padding 0 12px
+		position relative
+		&:after
+			content ''
+			display block
+			position: absolute;
+			top: 0;
+			right: -24px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 45px 24px 0 0;
+			border-color: #f0f0f0 transparent transparent transparent;
+	&-delete
+		sprite($s-icon-clear-filter)
+		position absolute
+		bottom: 0;
+		right: -24px;
+		cursor pointer
+		z-index 2
+		trans()
+		&:hover
+			opacity 0.7

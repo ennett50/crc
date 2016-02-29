@@ -1,0 +1,52 @@
+.sort
+	position relative
+	color #818181
+	open-sans()
+	margin-bottom 55px
+	font-size 18px
+	&-title
+		font-weight bold
+		display inline-block
+		color #393939
+		vertical-align middle
+	&-item
+		display inline-block
+		vertical-align middle
+		margin: 0 34px 0;
+		text-decoration none
+		trans()
+		&:hover
+			color #e74545
+		&.__up, &.__down
+			color #e74545
+			position relative
+
+			&:after
+				content ''
+				display block
+				position absolute
+				right: -22px;
+				top: 4px;
+		&.__up
+			&:after
+				sprite($s-icon-filter-up)
+		&.__down
+			&:after
+				sprite($s-icon-filter-down)
+	&-type
+		position absolute
+		right 0
+		top 0
+		&-list
+			sprite($s-icon-list)
+			display inline-block
+			vertical-align middle
+			margin-right 10px;
+			&:hover, &.__active
+				sprite($s-icon-list-active)
+		&-table
+			sprite($s-icon-table)
+			display inline-block
+			vertical-align middle
+			&:hover, &.__active
+				sprite($s-icon-table-active)

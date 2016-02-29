@@ -1,0 +1,60 @@
+.catalog
+	position relative
+	margin-bottom 68px
+	&-item
+		float left
+		width 33.33%
+		position relative
+		text-align center
+		open-sans()
+		font-size 16px
+		padding-bottom: 20px;
+		border 1px solid #f9f0e3
+		&:hover
+			.slider-actions-title
+				text-decoration underline
+	&-link
+		display block
+		content-center(100%,244px)
+		margin-bottom 10px
+		text-decoration none
+	&-persent
+		position: absolute;
+		top: 20px;
+		left: 0;
+		color: #fff;
+		font-size: 30px;
+		background: #e51f1f;
+		padding: 2px 10px;
+		z-index: 2;
+		min-width: 88px;
+
+		&:after
+			content ''
+			display block
+			width: 0;
+			position absolute
+			top 0
+			right -24px
+			height: 0;
+			border-style: solid;
+			border-width: 45px 24px 0 0;
+			border-color: #e51f1f transparent transparent transparent;
+	&-type
+		font-weight bold
+	&-title
+		text-decoration none
+		display inline-block
+		margin-bottom 15px
+		_text-overflow(95%)
+		&:hover
+			text-decoration underline
+	&-old-price
+		text-decoration line-through
+		color #515151
+		font-size 14px
+		font-weight 300
+	&-new-price
+		font-weight bold
+		margin-bottom 5px
+		color #582000

@@ -1,5 +1,6 @@
 var ui = {
     init: function () {
+        setTimeout(doRefreshUI, 10);
 
         this.phoneMask();
 
@@ -9,22 +10,26 @@ var ui = {
 
         this.sliderActions();
 
+        this.catalogFilter();
+
+        this.elementsForm();
+
     },
     phoneMask: function () {
         $("input.js-phone-mask").mask("+7(999) 999-99-99");
     },
 
-    initMainGallery : function(){
+    initMainGallery: function () {
         $('.js-main-gallery').bxSlider({
             pagerCustom: '#js-bx-pager',
-            mode : 'fade',
-            speed : 700,
-            auto : true
+            mode: 'fade',
+            speed: 700,
+            auto: true
         })
     },
-    sliderNews: function(){
+    sliderNews: function () {
         $('.js-list-news').bxSlider({
-            speed : 700,
+            speed: 700,
             pager: true,
             moveSlides: 1,
             minSlides: 2,
@@ -33,16 +38,148 @@ var ui = {
             slideMargin: 20
         })
     },
-    sliderActions : function(){
+    sliderActions: function () {
         $('.js-list-actions').bxSlider({
-            speed : 700,
+            speed: 700,
             moveSlides: 2,
             minSlides: 4,
             slideWidth: 370,
             maxSlides: 4,
-            pager : true,
+            pager: true,
             slideMargin: 0
         })
+    },
+    catalogFilter: function () {
+
+        $('.js-filter-category').each(function () {
+            $(this).on('click', function () {
+                var textToggleBtn, toggleContent;
+                toggleContent = $(this).next();
+                $(this).toggleClass('__active');
+                toggleContent.toggleClass('__active');
+
+            });
+        });
+
+        var _Link = $.noUiSlider.Link;
+        $('[data-filter-slider]').each(function () {
+            var $siderBlock = $(this);
+            var $slider = $siderBlock.find('[data-filter-slider-element~="line"]');
+            var $lowerTarget = $siderBlock.find('[data-filter-slider-element~="link-lower"]');
+            var $upperTarget = $siderBlock.find('[data-filter-slider-element~="link-upper"]');
+
+            var range = {
+                min: parseFloat($siderBlock.attr('data-filter-slider-min')),
+                max: parseFloat($siderBlock.attr('data-filter-slider-max'))
+            };
+            var step = parseFloat($siderBlock.attr('data-filter-slider-step'));
+            var startValues = [
+                ($siderBlock.find('[data-filter-slider-element~="start-lower"]').val() || 0),
+                ($siderBlock.find('[data-filter-slider-element~="start-upper"]').val() || 0)
+            ];
+
+            var sliderOptions = {
+                connect: true,
+                start: startValues,
+                range: range,
+                step: step,
+                serialization: {
+                    lower: [
+                        new _Link({
+                            target: $lowerTarget,
+                            format: {
+                                decimals: 0,
+                                thousand: ' '
+                            }
+                        })
+                    ],
+                    upper: [
+                        new _Link({
+                            target: $upperTarget,
+                            format: {
+                                decimals: 0,
+                                thousand: ' '
+                            }
+                        })
+                    ]
+                }
+            };
+
+            $slider.noUiSlider(sliderOptions);
+        });
+    },
+    elementsForm : function(){
+        var form;
+
+        form = function() {
+            $('input[type="checkbox"]:not(._inited):not(._default)').each(function() {
+                $(this).addClass('_inited').button().button("widget").addClass('ui-type-checkbox');
+            });
+            $('input[type="radio"]:not(._inited):not(._default)').each(function() {
+                $(this).addClass('_inited').button().button("widget").addClass('ui-type-radio');
+            });
+            $('select:not(._inited):not(._default)').each(function() {
+                return $(this).addClass('_inited').selectmenu();
+            });
+        };
+
+        doRefreshUI(form);
     }
 
 };
+
+
+window.DoList = function() {
+    var _list, _this;
+    _list = {};
+    _this = function(func, oneCall) {
+        var fn, id, idEvent;
+        if (func == null) {
+            func = false;
+        }
+        if (oneCall == null) {
+            oneCall = false;
+        }
+        if (func) {
+            if (typeof func === 'function') {
+                id = window.getRandom();
+                while (_list[id] != null) {
+                    id = window.getRandom();
+                }
+                _list[id] = func;
+                _list[id].isOneCall = oneCall;
+                return id;
+            }
+        } else if (func === false) {
+            for (idEvent in _list) {
+                fn = _list[idEvent];
+                if (typeof fn === 'function') {
+                    fn();
+                    if (fn.isOneCall) {
+                        _this.remove(idEvent);
+                    }
+                }
+            }
+        }
+    };
+    _this.remove = function(idEvent) {
+        if (_list[idEvent] != null) {
+            return delete _list[idEvent];
+        }
+    };
+    _this.getList = function() {
+        return _list;
+    };
+    return _this;
+};
+window.getRandom = function(min, max) {
+    if (!min) {
+        min = 0;
+    }
+    if (!max) {
+        max = min + 999999999;
+    }
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
+window.doRefreshUI = DoList();

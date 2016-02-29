@@ -1,0 +1,41 @@
+extends layouts/_default
+block vars
+	-var currentPageTitle = "Универсальные"
+	-var article = true
+	-var catalog = true
+block title
+	title=currentPageTitle
+block block-content
+	+breadcrumbsSimple(["Каталог", "Универсальные чехлы и кейсы"], '|')
+	h1 Универсальные чехлы и кейсы
+	div.selection
+		span.selection-title Выборка
+		span.selection-reset сбросить фильтр
+
+		div.selection-list
+			div.selection-item длина от 15 до 30 <span class="selection-delete"></span>
+			div.selection-item Жесткие <span class="selection-delete"></span>
+			div.selection-item Pelican <span class="selection-delete"></span>
+
+	div.sort
+		span.sort-title Сортировать по
+		a(href="#").sort-item.__up Цене
+		a(href="#").sort-item.__down Бренду
+		a(href="#").sort-item Размеру
+		div.sort-type
+			a(href="#").sort-type-list
+			a(href="#").sort-type-table.__active
+
+	div.catalog
+		ul.catalog-list.clearfix.list-unstyled
+			-for (var i = 0; i < 9; i++)
+				li.catalog-item
+					a(href="#").catalog-link
+						span.catalog-persent -23%
+						img(src="images/example/slider1.png" alt="")
+					div.catalog-type SKB
+					a(href="#").catalog-title iSeries GoPro Camera Case 1.0
+					div.catalog-old-price 32 600 Р
+					div.catalog-new-price 32 000 Р
+					a(href="#").button-info Подробно
+

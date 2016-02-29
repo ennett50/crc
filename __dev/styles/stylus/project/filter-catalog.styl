@@ -1,0 +1,112 @@
+.filter
+	position relative
+	margin-bottom 55px
+	&-category
+		text-transform uppercase
+		color #393939
+		font-size 14px
+		position relative
+		roboto_condensed()
+		margin-bottom 10px
+		box-sizing()
+		cursor pointer
+		padding-right: 20px;
+		trans()
+		&:hover
+			opacity 0.7
+		&.__active
+			&:after
+				sprite($s-icon-category-down)
+				margin-top -5px
+		&:after
+			content ''
+			display block
+			sprite($s-icon-category)
+			position absolute
+			top 50%
+			right 0
+			margin-top -10px
+	&-item
+		display none
+		margin-bottom 20px
+		background #fafafa
+		position relative
+		padding 12px 10px
+		font-size 20px
+		roboto_condensed()
+		color: #818181;
+		&.__active
+			display block
+	&-subitem
+		margin 20px 5px
+		&.__small-select
+			.ui-selectmenu-button span.ui-selectmenu-text
+				padding: 7px 25px 7px 10px;
+				font-size 12px
+		&.__color
+			display inline-block
+			vertical-align middle
+			margin 0
+			input
+				display none
+				&:checked + label
+					position relative
+					&:before
+						content ''
+						sprite($s-icon-checked)
+						position absolute
+						bottom -5px
+						left -5px
+
+			label
+				width 30px
+				height 30px
+				margin 10px 5px
+				cursor pointer
+
+	&-title
+		font-size 18px
+		line-height: normal;
+		display inline-block
+		vertical-align middle
+	&-info
+		position relative
+		.noUi-background
+			background #fff
+		.noUi-target
+			border-radius: 0;
+		.noUi-horizontal
+			height 9px
+			margin-bottom: 25px;
+		.noUi-origin
+			border-radius 0
+		.noUi-horizontal .noUi-handle
+			width 10px
+			height 30px
+			left: -10px;
+			top: -10px;
+		.noUi-connect .noUi-handle
+			left 0
+		.noUi-handle:after, .noUi-handle:before
+			display none
+		&-text
+			margin-bottom 20px
+			width 80px
+			input[type="text"]
+				color #818181
+				font-size 18px
+				roboto_condensed()
+				padding: 3px 10px;
+				text-align left
+	&-select
+		width 80px
+		margin-left 10px
+		display inline-block
+		vertical-align middle
+	&-category-title
+		color #000
+		font-size 16px
+		roboto_condensed()
+		padding: 10px 5px 0;
+		& + .filter-subitem:not(.__color)
+			margin-top 10px
