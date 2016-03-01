@@ -1,4 +1,4 @@
-div.filter
+mixin totalParams()
 	div.filter-category.js-filter-category Внешние габариты
 	div.filter-item
 		div.filter-title Длина, см
@@ -93,114 +93,123 @@ div.filter
 			input(type="checkbox" id="test_6" name="test_2" )
 			label(for="test_6") Бренд 3
 
-	div.filter-category.js-filter-category Объем, глубина и толщина стенок
-	div.filter-item
-		div.filter-title Объем, м
-		div.filter-info(data-filter-slider data-filter-slider-min="10" data-filter-slider-max="80" data-filter-slider-step="5")
-			div.filter-info-text.left
-				span от
-				input(type="text" value="15" data-filter-slider-element="start-lower link-lower")
-			div.filter-info-text.right
-				span до
-				input(type="text" value="70" data-filter-slider-element="start-upper link-upper")
-			div.clearfix
-			div(class="filter-slider" data-filter-slider-element="line")
-		div.filter-title Глубина, м
-		div.filter-info(data-filter-slider data-filter-slider-min="10" data-filter-slider-max="80" data-filter-slider-step="5")
-			div.filter-info-text.left
-				span от
-				input(type="text" value="15" data-filter-slider-element="start-lower link-lower")
-			div.filter-info-text.right
-				span до
-				input(type="text" value="70" data-filter-slider-element="start-upper link-upper")
-			div.clearfix
-			div(class="filter-slider" data-filter-slider-element="line")
-		div.filter-title Толщина, м
-		div.filter-info(data-filter-slider data-filter-slider-min="10" data-filter-slider-max="80" data-filter-slider-step="5")
-			div.filter-info-text.left
-				span от
-				input(type="text" value="15" data-filter-slider-element="start-lower link-lower")
-			div.filter-info-text.right
-				span до
-				input(type="text" value="70" data-filter-slider-element="start-upper link-upper")
-			div.clearfix
-			div(class="filter-slider" data-filter-slider-element="line")
+if (product)
+	div.filter
+		+totalParams()
+else
+	div.filter
+		+totalParams()
 
-	div.filter-category.js-filter-category Глубина рэка
-	div.filter-item
-		div.filter-title Длина
-		div.filter-select
-			select
-				option См
-				option М
-		div.filter-info(data-filter-slider data-filter-slider-min="10" data-filter-slider-max="80" data-filter-slider-step="5")
-			div.filter-info-text.left
-				span от
-				input(type="text" value="15" data-filter-slider-element="start-lower link-lower")
-			div.filter-info-text.right
-				span до
-				input(type="text" value="70" data-filter-slider-element="start-upper link-upper")
-			div.clearfix
-			div(class="filter-slider" data-filter-slider-element="line")
+		div.filter-category.js-filter-category Объем, глубина и толщина стенок
+		div.filter-item
+			div.filter-title Объем, м
+			div.filter-info(data-filter-slider data-filter-slider-min="10" data-filter-slider-max="80" data-filter-slider-step="5")
+				div.filter-info-text.left
+					span от
+					input(type="text" value="15" data-filter-slider-element="start-lower link-lower")
+				div.filter-info-text.right
+					span до
+					input(type="text" value="70" data-filter-slider-element="start-upper link-upper")
+				div.clearfix
+				div(class="filter-slider" data-filter-slider-element="line")
+			div.filter-title Глубина, м
+			div.filter-info(data-filter-slider data-filter-slider-min="10" data-filter-slider-max="80" data-filter-slider-step="5")
+				div.filter-info-text.left
+					span от
+					input(type="text" value="15" data-filter-slider-element="start-lower link-lower")
+				div.filter-info-text.right
+					span до
+					input(type="text" value="70" data-filter-slider-element="start-upper link-upper")
+				div.clearfix
+				div(class="filter-slider" data-filter-slider-element="line")
+			div.filter-title Толщина, м
+			div.filter-info(data-filter-slider data-filter-slider-min="10" data-filter-slider-max="80" data-filter-slider-step="5")
+				div.filter-info-text.left
+					span от
+					input(type="text" value="15" data-filter-slider-element="start-lower link-lower")
+				div.filter-info-text.right
+					span до
+					input(type="text" value="70" data-filter-slider-element="start-upper link-upper")
+				div.clearfix
+				div(class="filter-slider" data-filter-slider-element="line")
 
-		div.filter-title Высота
-		div.filter-select
-			select
-				option Юнит
-				option М
-		div.filter-info(data-filter-slider data-filter-slider-min="10" data-filter-slider-max="80" data-filter-slider-step="5")
-			div.filter-info-text.left
-				span от
-				input(type="text" value="15" data-filter-slider-element="start-lower link-lower")
-			div.filter-info-text.right
-				span до
-				input(type="text" value="70" data-filter-slider-element="start-upper link-upper")
-			div.clearfix
-			div(class="filter-slider" data-filter-slider-element="line")
+		div.filter-category.js-filter-category Глубина рэка
+		div.filter-item
+			div.filter-title Длина
+			div.filter-select
+				select
+					option См
+					option М
+			div.filter-info(data-filter-slider data-filter-slider-min="10" data-filter-slider-max="80" data-filter-slider-step="5")
+				div.filter-info-text.left
+					span от
+					input(type="text" value="15" data-filter-slider-element="start-lower link-lower")
+				div.filter-info-text.right
+					span до
+					input(type="text" value="70" data-filter-slider-element="start-upper link-upper")
+				div.clearfix
+				div(class="filter-slider" data-filter-slider-element="line")
 
-	div.filter-category.js-filter-category Дополнительно
-	div.filter-item
-		div.filter-category-title Тип крышки
-		div.filter-subitem.clearfix
-			input(type="radio" id="test_14" name="test_5" checked="")
-			label(for="test_14") Жесткий (35)
-		div.filter-subitem.clearfix
-			input(type="radio" id="test_15" name="test_5" )
-			label(for="test_15") Полужесткий (64)
-		div.filter-subitem.clearfix
-			input(type="radio" id="test_16" name="test_5" )
-			label(for="test_16") Мягкий
-		div.filter-category-title Цвет
-		div.filter-subitem.clearfix.__color
-			input(type="checkbox" id="test_114" name="test_15" checked="")._default
-			label(for="test_114" style="background:blue")
-		div.filter-subitem.clearfix.__color
-			input(type="checkbox" id="test_115" name="test_15" )._default
-			label(for="test_115" style="background:green")
-		div.filter-subitem.clearfix.__color
-			input(type="checkbox" id="test_116" name="test_15" )._default
-			label(for="test_116" style="background:red")
-		div.filter-subitem.clearfix.__color
-			input(type="checkbox" id="test_114" name="test_15" checked="")._default
-			label(for="test_114" style="background:blue")
-		div.filter-subitem.clearfix.__color
-			input(type="checkbox" id="test_115" name="test_15" )._default
-			label(for="test_115" style="background:green")
-		div.filter-subitem.clearfix.__color
-			input(type="checkbox" id="test_116" name="test_15" )._default
-			label(for="test_116" style="background:red")
+			div.filter-title Высота
+			div.filter-select
+				select
+					option Юнит
+					option М
+			div.filter-info(data-filter-slider data-filter-slider-min="10" data-filter-slider-max="80" data-filter-slider-step="5")
+				div.filter-info-text.left
+					span от
+					input(type="text" value="15" data-filter-slider-element="start-lower link-lower")
+				div.filter-info-text.right
+					span до
+					input(type="text" value="70" data-filter-slider-element="start-upper link-upper")
+				div.clearfix
+				div(class="filter-slider" data-filter-slider-element="line")
 
-		div.filter-category-title Материал
-		div.filter-subitem.__small-select
-			select
-				option Сверхвысокопрочный материал
-				option Сверхвысокопрочный материал 1
+		div.filter-category.js-filter-category Дополнительно
+		div.filter-item
+			div.filter-category-title Тип крышки
+			div.filter-subitem.clearfix
+				input(type="radio" id="test_14" name="test_5" checked="")
+				label(for="test_14") Жесткий (35)
+			div.filter-subitem.clearfix
+				input(type="radio" id="test_15" name="test_5" )
+				label(for="test_15") Полужесткий (64)
+			div.filter-subitem.clearfix
+				input(type="radio" id="test_16" name="test_5" )
+				label(for="test_16") Мягкий
+			div.filter-category-title Цвет
+			div.filter-subitem.clearfix.__color
+				input(type="checkbox" id="test_114" name="test_15" checked="")._default
+				label(for="test_114" style="background:blue")
+			div.filter-subitem.clearfix.__color
+				input(type="checkbox" id="test_115" name="test_15" )._default
+				label(for="test_115" style="background:green")
+			div.filter-subitem.clearfix.__color
+				input(type="checkbox" id="test_116" name="test_15" )._default
+				label(for="test_116" style="background:red")
+			div.filter-subitem.clearfix.__color
+				input(type="checkbox" id="test_114" name="test_15" checked="")._default
+				label(for="test_114" style="background:blue")
+			div.filter-subitem.clearfix.__color
+				input(type="checkbox" id="test_115" name="test_15" )._default
+				label(for="test_115" style="background:green")
+			div.filter-subitem.clearfix.__color
+				input(type="checkbox" id="test_116" name="test_15" )._default
+				label(for="test_116" style="background:red")
 
-		div.filter-category-title Способ изготовления
-		div.filter-subitem.__small-select
-			select
-				option Ротоформирование
-				option Ротоформирование 1
-		div.filter-subitem.clearfix
-			input(type="checkbox" id="test_1136" name="test_135" )
-			label(for="test_1136") Штабелируемость
+			div.filter-category-title Материал
+			div.filter-subitem.__small-select
+				select
+					option Сверхвысокопрочный материал
+					option Сверхвысокопрочный материал 1
+
+			div.filter-category-title Способ изготовления
+			div.filter-subitem.__small-select
+				select
+					option Ротоформирование
+					option Ротоформирование 1
+			div.filter-subitem.clearfix
+				input(type="checkbox" id="test_1136" name="test_135" )
+				label(for="test_1136") Штабелируемость
+
+

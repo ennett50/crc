@@ -1,0 +1,24 @@
+div.catalog(class="#{filter_table  ? '__list' : ''}")
+	ul.catalog-list.clearfix.list-unstyled
+		-for (var i = 0; i < 9; i++)
+			li.catalog-item
+				div.catalog-kind
+					a(href="#" style="background:red").catalog-kind-color
+					a(href="#" style="background:green").catalog-kind-color
+					a(href="#" style="background:black").catalog-kind-color
+				a(href="#").catalog-link
+					span.catalog-persent -23%
+					img(src="images/example/slider1.png" alt="")
+				div.catalog-type SKB
+				div.catalog-info
+					a(href="#").catalog-title iSeries GoPro Camera Case 1.0
+					div.catalog-size 47см Х 16см Х 13см
+				div.catalog-price
+					div.catalog-old-price 32 600 Р
+					div.catalog-new-price 32 000 Р
+				a(href="#").button-info Подробно
+				if(filter_table)
+					div.catalog-activity
+						a(href="#").catalog-activity-link.__active В закладках
+						br
+						a(href="#").catalog-activity-link К сравнению

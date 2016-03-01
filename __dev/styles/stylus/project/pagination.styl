@@ -1,3 +1,26 @@
 .pagination
 	position relative
-	margin 0
+	margin 0 0 95px
+	open-sans()
+	font-size 14px
+	font-weight bold
+	color #582000
+	display block
+	text-align center
+	& + .text
+		margin-bottom 55px
+	&-link
+		display inline-block
+		vertical-align middle
+		margin 0 4px 10px
+		text-decoration none
+		width 40px;
+		height 40px
+		line-height 40px
+		text-align center
+		trans()
+		background #fcf7f1
+		&:hover, &.__current
+			color #ffedab
+			background #582000
+

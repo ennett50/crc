@@ -3,6 +3,7 @@ block vars
 	-var currentPageTitle = "Универсальные"
 	-var article = true
 	-var catalog = true
+	-var filter_table = true
 block title
 	title=currentPageTitle
 block block-content
@@ -12,28 +13,21 @@ block block-content
 		div.selection
 			span.selection-title Выборка
 			span.selection-reset сбросить фильтр
-
 			div.selection-list
 				div.selection-item длина от 15 до 30 <span class="selection-delete"></span>
 				div.selection-item Жесткие <span class="selection-delete"></span>
 				div.selection-item Pelican <span class="selection-delete"></span>
-
 		div.sort
 			span.sort-title Сортировать по
 			a(href="#").sort-item.__up Цене
 			a(href="#").sort-item.__down Бренду
 			a(href="#").sort-item Размеру
 			div.sort-type
-				a(href="filter_table.html").sort-type-list
-				a(href="filter.html").sort-type-table.__active
-
-
+				a(href="filter_table.html").sort-type-list.__active
+				a(href="filter.html").sort-type-table
 		include modules/catalog-list
-
 		include modules/pagination
 		div.text
 			p Вопрос грамотной упаковки грузов для их последующей перевозки на паллетах или поддонах – один из основных вопросов, которые приходится ежедневно решать в индустрии грузоперевозок.
 			p Главная задача, которая встает при осуществлении задачи перевозки так называемых «сборных» грузов – это задача размещения на паллете или поддоне нескольких коробок или ящиков друг на друге таким образом, чтобы при транспортировке они не соскользнули и не упали на землю. Очевидно, что при использовании стандартной тары решение такой задачи выглядит довольно сложным – соответственно, многократно возрастает и риск порчи или повреждения перевозимых товаров.
 			p Купить штабелируемые кейсы Pelican-Hardigg Inter-Stacking Pattern (ISP) Cases Вы можете в нашем интернет-магазине CRCSPB.RU, в котором представлен широкий ассортимент кейсов и кофров различного назначения, приобрести которые можно как при помощи заказа «Экстра», так и путем выбора из основного каталога.
-
-

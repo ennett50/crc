@@ -1,0 +1,12 @@
+extends layouts/_default
+block vars
+	-var currentPageTitle = "Универсальные"
+	-var article = true
+	-var catalog = true
+	-var product = true
+block title
+	title=currentPageTitle
+block block-content
+	+breadcrumbsSimple(["Каталог", "Универсальные чехлы и кейсы", "кейс 3i-0806-3B"], '|')
+	h1 Кейс 3i-0806-3B
+	div.catalog-ctn
