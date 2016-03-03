@@ -9,4 +9,43 @@ block title
 block block-content
 	+breadcrumbsSimple(["Каталог", "Универсальные чехлы и кейсы", "кейс 3i-0806-3B"], '|')
 	h1 Кейс 3i-0806-3B
-	div.catalog-ctn
+	div.catalog-ctn.clearfixc
+		div.catalog-detail-gallery
+			ul.gallery.js-gallery
+				li.gallery-item
+					div.gallery-text
+						div.gallery-count-item - 78 -
+						div.gallery-title Кейсы для оружия
+					img(src='images/example/product1.png' alt="").gallery-img
+				li.gallery-item
+					div.gallery-text
+						div.gallery-count-item - 878 -
+						div.gallery-title Чехля для много чего еще
+					img(src='images/example/product12.png' alt="").gallery-img
+		
+			div#js-bx-pager.gallery-pager
+				a(data-slide-index='0', href='').gallery-preview
+					img(src='images/example/gallery/1.png' alt="")
+				a(data-slide-index='1', href='').gallery-preview
+					img(src='images/example/gallery/2.png' alt="")
+		div.catalog-detail-info
+			div.catalog-detail-title Производитель
+			div.catalog-detail-desc SKB
+
+			div.catalog-detail-title Артикул
+			div.catalog-detail-desc Inseries 0806-3 waterroof utility case
+
+			div.catalog-detail-title Выберите цвет
+			div.catalog-detail-desc цвет
+
+			div.catalog-detail-title Конфигурация
+			div.catalog-detail-desc
+				select
+					option Конфигурация №1
+					option Конфигурация №2
+					option Конфигурация №3
+			div.catalog-detail-bts
+				div.catalog-detail-buy
+					div.catalog-detail-price 6 190 Р
+					a(href="#").button Купить
+				a(href="#").button.__grey Добавить в закладки
