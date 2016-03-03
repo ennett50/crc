@@ -1,51 +1,67 @@
 extends layouts/_default
 block vars
-	-var currentPageTitle = "Универсальные"
-	-var article = true
-	-var catalog = true
-	-var product = true
+    -var currentPageTitle = "Универсальные"
+    -var article = true
+    -var catalog = true
+    -var product = true
 block title
-	title=currentPageTitle
+    title=currentPageTitle
 block block-content
-	+breadcrumbsSimple(["Каталог", "Универсальные чехлы и кейсы", "кейс 3i-0806-3B"], '|')
-	h1 Кейс 3i-0806-3B
-	div.catalog-ctn.clearfixc
-		div.catalog-detail-gallery
-			ul.gallery.js-gallery
-				li.gallery-item
-					div.gallery-text
-						div.gallery-count-item - 78 -
-						div.gallery-title Кейсы для оружия
-					img(src='images/example/product1.png' alt="").gallery-img
-				li.gallery-item
-					div.gallery-text
-						div.gallery-count-item - 878 -
-						div.gallery-title Чехля для много чего еще
-					img(src='images/example/product12.png' alt="").gallery-img
-		
-			div#js-bx-pager.gallery-pager
-				a(data-slide-index='0', href='').gallery-preview
-					img(src='images/example/gallery/1.png' alt="")
-				a(data-slide-index='1', href='').gallery-preview
-					img(src='images/example/gallery/2.png' alt="")
-		div.catalog-detail-info
-			div.catalog-detail-title Производитель
-			div.catalog-detail-desc SKB
+    +breadcrumbsSimple(["Каталог", "Универсальные чехлы и кейсы", "кейс 3i-0806-3B"], '|')
+    h1 Кейс 3i-0806-3B
+    div.catalog-detail.clearfix.catalog-ctn
+        div.catalog-detail-gallery
+            ul.gallery.js-gallery.list-unstyled
+                li.gallery-item
+                    span.slider-actions-persent -23%
+                    img(src='images/example/product1.png' alt="").gallery-img
+                li.gallery-item
+                    img(src='images/example/product2.png' alt="").gallery-img
+                li.gallery-item
+                    img(src='images/example/product1.png' alt="").gallery-img
+                li.gallery-item
+                    img(src='images/example/product2.png' alt="").gallery-img
+            div#js-bx-pager.gallery-pager.clearfix
+                a(data-slide-index='0', href='').gallery-preview
+                    img(src='images/example/product1.png' alt="")
+                a(data-slide-index='1', href='').gallery-preview
+                    img(src='images/example/product2.png' alt="")
+                a(data-slide-index='3', href='').gallery-preview
+                    img(src='images/example/product1.png' alt="")
+                a(data-slide-index='4', href='').gallery-preview
+                    img(src='images/example/product2.png' alt="")
 
-			div.catalog-detail-title Артикул
-			div.catalog-detail-desc Inseries 0806-3 waterroof utility case
+        div.catalog-detail-right
+            form(method="" action="").catalog-detail-info
+                div.catalog-detail-title Производитель:
+                div.catalog-detail-desc
+                    img(src="images/example/skb.png" alt="")
+                    !="\n"
+                    span SKB
 
-			div.catalog-detail-title Выберите цвет
-			div.catalog-detail-desc цвет
+                div.catalog-detail-title Артикул:
+                div.catalog-detail-desc Inseries 0806-3 waterroof utility case
 
-			div.catalog-detail-title Конфигурация
-			div.catalog-detail-desc
-				select
-					option Конфигурация №1
-					option Конфигурация №2
-					option Конфигурация №3
-			div.catalog-detail-bts
-				div.catalog-detail-buy
-					div.catalog-detail-price 6 190 Р
-					a(href="#").button Купить
-				a(href="#").button.__grey Добавить в закладки
+                div.catalog-detail-title Выберите цвет:
+                div.catalog-detail-desc
+                    div.filter-subitem.clearfix.__color
+                        input(type="radio" id="test_114" name="test_15" checked="")._default
+                        label(for="test_114" style="background:blue")
+                    div.filter-subitem.clearfix.__color
+                        input(type="radio" id="test_115" name="test_15" )._default
+                        label(for="test_115" style="background:green")
+                    div.filter-subitem.clearfix.__color
+                        input(type="radio" id="test_116" name="test_15" )._default
+                        label(for="test_116" style="background:red")
+
+                div.catalog-detail-title Конфигурация:
+                div.catalog-detail-desc
+                    select
+                        option Конфигурация №1
+                        option Конфигурация №2
+                        option Конфигурация №3
+                div.catalog-detail-bts
+                    div.catalog-detail-buy
+                        div.catalog-detail-price 6 190 Р
+                        a(href="#").button Купить
+                    a(href="#").button.__grey Добавить в закладки

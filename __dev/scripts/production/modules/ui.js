@@ -5,6 +5,7 @@ var ui = {
         this.phoneMask();
 
         this.initMainGallery();
+	    this.initCatalogGallery();
 
         this.sliderNews();
 
@@ -27,6 +28,15 @@ var ui = {
             auto: true
         })
     },
+	initCatalogGallery: function () {
+		$('.js-gallery').bxSlider({
+			pagerCustom: '#js-bx-pager',
+			mode: 'fade',
+			speed: 700,
+			auto: true,
+			controls: false
+		})
+	},
     sliderNews: function () {
         $('.js-list-news').bxSlider({
             speed: 700,
