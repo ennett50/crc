@@ -1,5 +1,12 @@
 .catalog-detail
 	position relative
+	max-width: 828px;
+	.bx-wrapper
+		margin-bottom 21px
+	.tabs
+		padding-left: 4px;
+	h1
+		margin-top 0
 	&-gallery
 		width 450px
 		position relative
@@ -10,13 +17,18 @@
 		margin-left -450px
 		width 100%
 	&-info
+		margin-bottom: 44px;
+		background #fafafa
 		position relative
+		margin-top: 20px;
+		border-box()
 		z-index 1
+		padding: 62px 17px 12px;
 		margin-left 480px
 		font-size 16px
 		open-sans()
 	&-title
-		margin-bottom 12px;
+		margin-bottom 10px;
 		font-weight 300
 	&-desc
 		font-weight bold
@@ -24,12 +36,18 @@
 		line-height: 18px;
 		font-size 18px
 		text-transform uppercase
-		margin-bottom 25px
+		margin-bottom 29px
+		&.__bottom-small
+			margin-bottom 20px
+		&.__bottom-big
+			margin-bottom 52px
 		span, img
 			display inline-block
 			vertical-align bottom
 		img + span
 			margin-left 5px
+			position: relative;
+			top: -9px;
 			line-height: 14px
 	.filter-subitem.__color
 		label
@@ -47,7 +65,7 @@
 	.ui-selectmenu-button span.ui-icon
 		right 10px
 	&-bts
-		margin-top 55px
+		margin-top 36px
 		text-align right
 	&-price
 		display inline-block
@@ -56,11 +74,14 @@
 		font-size 50px
 		font-weight bold
 		text-transform uppercase
+
 	.button
-		width 140px
-		display inline-block
-		vertical-align middle
+		width: 121px;
+		display: inline-block;
+		vertical-align: middle;
 		open-sans()
-		margin-left: 20px;
-		font-size 20px
-		font-weight bold
+		margin-left: 18px;
+		font-size: 20px;
+		font-weight: bold;
+		&-add
+			margin-top: 10px;

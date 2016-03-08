@@ -15,6 +15,8 @@ var ui = {
 
         this.elementsForm();
 
+        this.tabs()
+
     },
     phoneMask: function () {
         $("input.js-phone-mask").mask("+7(999) 999-99-99");
@@ -33,7 +35,7 @@ var ui = {
 			pagerCustom: '#js-bx-pager',
 			mode: 'fade',
 			speed: 700,
-			auto: true,
+			auto: false,
 			controls: false
 		})
 	},
@@ -134,6 +136,18 @@ var ui = {
         };
 
         doRefreshUI(form);
+    },
+    tabs : function() {
+        $('body').on('click', '.js-tabs a[href][data-tabs]', function(e) {
+
+            var $group, $groupTargets, $tab, $target;
+            e.preventDefault();
+            $tab = $(this);
+
+            $('.js-tabs a, [data-tabs-group]').removeClass('__current');
+            $('[data-tabs-group="' + $tab.attr('data-tabs') + '"]').addClass('__current');
+            $tab.addClass('__current');
+        });
     }
 
 };
