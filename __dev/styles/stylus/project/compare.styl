@@ -1,0 +1,95 @@
+.compare
+	position relative
+	margin 0 -25px 40px
+	overflow-x auto
+	&-item
+		width: 302px;
+		display: table-cell;
+		padding: 0 25px;
+	&-title
+		background #e7e8e8
+		text-transform uppercase
+		margin-bottom 47px
+		padding 12px 20px
+		font-size 18px
+		roboto()
+		font-weight bold
+		display block
+		text-decoration none
+		trans()
+		line-height: 18px;
+		height 60px
+		overflow hidden
+		&:hover
+			opacity 0.7
+	&-preview
+		content-center(100%, 190px)
+	&-price
+		text-decoration none
+		position relative
+		font-size 30px
+		open-sans()
+		font-weight bold
+		text-align center
+		border-bottom 1px solid #e7e8e8
+		margin-bottom: 39px;
+		padding-bottom: 19px;
+
+	&-add-basket
+		text-decoration none
+		trans()
+		position relative
+		display inline-block
+		&:hover
+			color: #e74545;
+		&:after
+			content ''
+			display block
+			position absolute
+			top: 8px;
+			right: -25px;
+			sprite($s-icon-basket-small)
+		&:hover
+			&:after
+				sprite($s-icon-basket-small-hover)
+	&-info, &-info.product-options-item
+		float: none;
+		width: 270px;
+		margin: 0 auto 33px;
+		display: block;
+		height: 280px;
+		.product-options-desc
+			max-width 88%
+	&-aside
+		padding-top: 87px;
+		position relative
+		.compare-info
+			width auto
+	&-weight-text
+		roboto()
+		font-size 18px
+		font-weight bold
+		text-transform uppercase
+		text-align center
+	&-findings-item
+		color #818181
+		roboto_condensed()
+		font-size: 18px;
+		margin-bottom: 60px;
+		position: relative;
+		line-height: 20px;
+	&-checked
+		sprite($s-icon-compare-checked)
+		position absolute
+		margin auto
+		top 0
+		left 0
+		right 0
+		bottom 0
+	&-findings
+		height 25px
+		margin-bottom: 14px;
+		.product-options-title
+			margin 0
+	&-weight
+		height: 66px;

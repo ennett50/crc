@@ -35,6 +35,22 @@ html(lang="ru").no-js
 										a(href="#").left-menu-link Транспортные контейнеры
 						if (catalog)
 							include ../modules/filter-catalog
+
+						if (compare)
+							div.compare-aside.js-comapare-column
+								div.compare-info
+									div.product-options-title Габариты внешние
+								div.compare-info
+									div.product-options-title Размеры внутренние
+								div.compare-weight
+									div.product-options-title Масса
+								div.compare-findings
+									div.product-options-title Фурнитура
+								div.compare-findings-item Выдвижная ручка
+								div.compare-findings-item Петли для навесных замков или одноразовых пломб
+
+								div.compare-findings-item Колеса
+
 					div.after-left-aside
 						if (text)
 							div.content.__fixed

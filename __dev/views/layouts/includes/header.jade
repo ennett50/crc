@@ -6,7 +6,10 @@ header.header
 
 			div.right
 				!='\n'
-				a(href="#").header-link Сравнение
+				if (currentPageTitle == 'Сравнение')
+					span.header-link.__current Сравнение
+				else
+					a(href="#").header-link Сравнение
 				!='\n'
 				a(href="#").header-link Закладки
 				!='\n'

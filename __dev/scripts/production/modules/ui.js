@@ -17,6 +17,15 @@ var ui = {
 
         this.tabs()
 
+        $('.js-comapare-column .compare-findings-item').each(function(e){
+            var parentHeight = $(this).outerHeight();
+            $('.compare-findings-item[data-index="'+e+'"]').css({
+                height: parentHeight
+            })
+            console.log(parentHeight)
+        });
+
+
     },
     phoneMask: function () {
         $("input.js-phone-mask").mask("+7(999) 999-99-99");
