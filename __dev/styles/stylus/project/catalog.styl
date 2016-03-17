@@ -105,15 +105,17 @@
 		position relative
 		margin-top: -20px;
 	&-activity
+		display: block;
+		position: relative;
+		top: 0;
+		text-align: center;
+		width: auto;
+		padding-top: 23px;
 		text-transform uppercase
 		open-sans()
 		color #393939
 		z-index 2
-		width 200px
-		position: absolute;
-		top: 97px;
-		right: 24px;
-		text-align right
+
 		&-link
 			text-decoration none
 			trans()
@@ -125,6 +127,13 @@
 				color #e51f1f
 
 	&.__list
+		.catalog-activity
+			width 200px
+			position: absolute;
+			top: 97px;
+			right: 24px;
+			text-align right
+
 		.catalog-item
 			text-align left
 			display inline-block

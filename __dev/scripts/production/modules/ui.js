@@ -10,6 +10,7 @@ var ui = {
         this.sliderNews();
 
         this.sliderActions();
+        this.sliderDetail();
 
         this.catalogFilter();
 
@@ -21,8 +22,7 @@ var ui = {
             var parentHeight = $(this).outerHeight();
             $('.compare-findings-item[data-index="'+e+'"]').css({
                 height: parentHeight
-            })
-            console.log(parentHeight)
+            });
         });
 
 
@@ -70,6 +70,18 @@ var ui = {
             slideMargin: 0
         })
     },
+    sliderDetail: function () {
+        $('.js-list-detail').bxSlider({
+            speed: 700,
+            moveSlides: 1,
+            minSlides: 3,
+            slideWidth: 260,
+            maxSlides: 3,
+            pager: true,
+            slideMargin: 0
+        })
+    },
+
     catalogFilter: function () {
 
         $('.js-filter-category').each(function () {

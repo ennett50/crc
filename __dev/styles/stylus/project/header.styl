@@ -1,7 +1,7 @@
 .header
 	position relative
-	//background images('bg/pattern-header.png') repeat
-	background #211E1B
+	background images('bg/pattern-header.png') repeat
+	background-color #211E1B
 	color #fff
 	font-family: 'Open Sans', sans-serif;
 	padding 4px 0 0
@@ -62,6 +62,16 @@
 		//background: url("../images/bg/pattern-header.png") repeat;
 		background: #211E1B;
 		border-radius: 48%;
+		trans()
+		& > img
+			trans()
+		@media screen and (max-width: 1245px)
+			margin-left: -94px;
+			top: 7px;
+			width: 185px;
+			height: 185px;
+			& > img
+				max-height 68%
 	&-bottom-line
 		position relative
 		font-size: 17px;

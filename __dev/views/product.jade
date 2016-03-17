@@ -3,6 +3,7 @@ block vars
 	-var currentPageTitle = "Универсальные"
 	-var article = true
 	-var catalog = true
+	-var filter_table = true
 	-var product = true
 block title
 	title=currentPageTitle
@@ -123,7 +124,129 @@ block block-content
 							div.product-options-result 47.6
 
 
-			div(data-tabs-group="tab-options")#tab-options 2
-			div(data-tabs-group="tab-modify")#tab-modify 3
-			div(data-tabs-group="tab-accessories")#tab-accessories 4
-			div(data-tabs-group="tab-description")#tab-description 5
+			div(data-tabs-group="tab-options")#tab-options
+				table.table.borderless
+					tr
+						td <b>Тип конструкции:</b>
+						td Жесткий
+					tr
+						td <b>Защищенность:</b>
+						td
+							|Водо-пыле- непроницаемая конструкция (стандарт MIL-C-4150J)
+							br
+							|Наличие клапана выравнивания давления (MIL-STD-648C)
+							br
+							|IP67
+					tr
+						td <b>Объем:</b>
+						td 35 л
+					tr
+						td <b>Тип крышки:</b>
+						td Съемная
+					tr
+						td <b>Размер крышки:</b>
+						td 300 на 200
+					tr
+						td <b>Размер корпуса:</b>
+						td 300 на 200
+					tr
+						td <b>Материал:</b>
+						td HPX® полимер
+					tr
+						td <b>Способ изготовления:</b>
+						td термовакуумное формование
+					tr
+						td <b>Ручки:</b>
+						td Да (или можно конкретное описание)
+					tr
+						td <b>Петли:</b>
+						td Да (или можно конкретное описание)
+					tr
+						td <b>Колеса:</b>
+						td Да (или можно конкретное описание)
+					tr
+						td <b>Штабелируемость:</b>
+						td Да
+					tr
+						td <b>Гарантия:</b>
+						td Пожизненная гарантия (непосредственному покупателю)
+					tr
+						td <b>Дополнительно:</b>
+						td Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+
+			div(data-tabs-group="tab-modify")#tab-modify
+				div.catalog
+					ul.catalog-list.clearfix.list-unstyled
+						-for (var i = 0; i < 3; i++)
+							li.catalog-item
+								div.catalog-kind
+									a(href="#" style="background:red").catalog-kind-color
+									a(href="#" style="background:green").catalog-kind-color
+									a(href="#" style="background:black").catalog-kind-color
+								a(href="#").catalog-link
+									span.catalog-persent -23%
+									img(src="images/example/slider1.png" alt="")
+								div.catalog-type SKB
+								div.catalog-info
+									a(href="#").catalog-title iSeries GoPro Camera Case 1.0
+									div.catalog-size 47см Х 16см Х 13см
+								div.catalog-price
+									div.catalog-old-price 32 600 Р
+									div.catalog-new-price 32 000 Р
+								a(href="#").button-info Подробно
+								if(filter_table)
+									div.catalog-activity
+										a(href="#").catalog-activity-link.__active В закладках
+										br
+										a(href="#").catalog-activity-link К сравнению
+			div(data-tabs-group="tab-accessories")#tab-accessories
+				div.catalog
+					ul.catalog-list.clearfix.list-unstyled
+						-for (var i = 0; i < 2; i++)
+							li.catalog-item
+								div.catalog-kind
+									a(href="#" style="background:red").catalog-kind-color
+									a(href="#" style="background:green").catalog-kind-color
+									a(href="#" style="background:black").catalog-kind-color
+								a(href="#").catalog-link
+									span.catalog-persent -23%
+									img(src="images/example/slider1.png" alt="")
+								div.catalog-type SKB
+								div.catalog-info
+									a(href="#").catalog-title iSeries GoPro Camera Case 1.0
+									div.catalog-size 47см Х 16см Х 13см
+								div.catalog-price
+									div.catalog-old-price 32 600 Р
+									div.catalog-new-price 32 000 Р
+								a(href="#").button-info Подробно
+								if(filter_table)
+									div.catalog-activity
+										a(href="#").catalog-activity-link.__active В закладках
+										br
+										a(href="#").catalog-activity-link К сравнению
+			div(data-tabs-group="tab-description")#tab-description
+				p {Абзац} Reprehenderit minima nihil quasi sunt&nbsp;
+					a(href="#") Ссылка в тексте
+					|  eum. Rerum, repellendus sed itaque quos beatae aspernatur esse delectus numquam ea quae iste ipsum modi voluptatibus aperiam dolorum architecto nostrum suscipit maiores ipsa dolores vel. Vitae laborum, eveniet molestiae aperiam laboriosam nobis maiores placeat?
+				p {Абзац} Mollitia ab impedit necessitatibus animi fugiat quae tenetur sunt qui, neque consectetur sit, quisquam iure accusantium placeat iusto labore rerum ad, doloremque excepturi. Quo rerum maiores ipsa, aliquid expedita, id dolorem magnam sed architecto temporibus iure quisquam voluptatem itaque, sunt.
+				ol
+					li
+						|  Lorem ipsum dolor sit.
+					li
+						|  Eveniet tempora odit facilis.
+					ol
+						li
+							|  Repellendus deleniti, quod aperiam.
+						li
+							|  Atque natus, voluptatem odio.
+						ol
+							li
+								|  Repellendus deleniti, quod aperiam.
+						li
+							|  Placeat inventore adipisci sed.
+
+
+				| <blockquote>
+				| <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+				| <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+				| </blockquote>

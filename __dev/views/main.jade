@@ -14,6 +14,28 @@ block block-content
 			p Компания CRCSPB.RU специализируется на торговле товарами таких категорий, как кейсы для приборов, инструментов и оборудования различного назначения, кофры для музыкальных инструментов всех видов, кофры для музыкальной аппаратуры, кейсы для оружия, а также кейсы и кофры для перевозки различных стандартных и нестандартных предметов.
 		include modules/catalog
 		include modules/slider-actions
+		div.slider-actions
+			ul.slider-actions-list.clearfix.list-unstyled.js-list-detail
+				-for (var i = 0; i < 4; i++)
+					li.slider-actions-item
+						div.catalog-kind
+							a(href="#" style="background:red").catalog-kind-color
+							a(href="#" style="background:green").catalog-kind-color
+							a(href="#" style="background:black").catalog-kind-color
+						a(href="#").slider-actions-link
+							span.slider-actions-persent -23%
+							img(src="images/example/slider1.png" alt="")
+						div.slider-actions-type SKB
+						a(href="#").slider-actions-title iSeries GoPro Camera Case 1.0
+						div.slider-actions-old-price 32 600 Р
+						div.slider-actions-new-price 32 000 Р
+						a(href="#").button-info Подробно
+
+						if(filter_table)
+							div.catalog-activity
+								a(href="#").catalog-activity-link.__active В закладках
+								br
+								a(href="#").catalog-activity-link К сравнению
 
 	include modules/main-text
 	div.container
